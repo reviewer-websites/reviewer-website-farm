@@ -35,6 +35,6 @@ Keep the entire folder together when copying or sharing it. Nothing is published
 
 ## Alignment with the main paper (15 September 2026)
 
-Table A9(a) reports the retrieval-stage ablation under visible-mask IoU >= 0.1. The retrieval-mechanism comparison in A9(c) uses the two indoor subsets. Table A6 follows the main paper’s results, including the ScanNet–5 DAAAM+G MRR of 0.371. The A2 study holds targets and queries fixed to measure robustness across acquisition conditions. The eight Spot query outcomes, including two failures, are listed in Table A11.
+Table A9(a) reports the retrieval-stage ablation under visible-mask IoU >= 0.1. Table A9(c) includes FARM-Scenes results of 16.3/47.3 for structured retrieval without reranking and 24.2/47.3 with Qwen@5, matching the main paper. Table A6 follows the main paper’s results, including the ScanNet–5 DAAAM+G MRR of 0.371. The A2 study holds targets and queries fixed to measure robustness across acquisition conditions. The eight Spot query outcomes, including two failures, are listed in Table A11.
 
 The paper and native HTML share the same method definitions and evaluation scope. The source PDFs were rebuilt and visually checked. All video files are unchanged.
