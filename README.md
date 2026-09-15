@@ -12,7 +12,7 @@ Then visit `http://127.0.0.1:8794/`.
 
 - Three short demonstrations and a compressed full video.
 - A short reading guide and section navigation.
-- The complete appendix as native, searchable HTML: five main sections, all 15 subsections, 13 tables (Table A10 has two parts), six numbered figures using seven individual images, three additional Unitree A2 setup frames, equations, and 20 bibliography entries.
+- The complete appendix as native, searchable HTML: five main sections, 11 numbered tables (Table A9 has three parts), five numbered figures using six individual images, three additional Unitree A2 setup frames, equations, and 20 bibliography entries.
 - No PDF files, page scans, external links, remote libraries, tracking, or submission author/affiliation blocks.
 
 ## Files
@@ -32,3 +32,9 @@ No installation or build step is required. All appendix content remains readable
 The full video is approximately 86 MB, reduced from approximately 186 MB, with its complete 4-minute 31-second sequence retained. The full video uses the supplied anonymized edition, with its original audio preserved. Video 2 uses the supplied anonymized real-robot navigation clip (35 seconds), with its original audio preserved. The mapping and scene-scale clips remain silent reviewer copies. Figure assets are rendered from the anonymized appendix figures; they are not screenshots of appendix pages. Bibliographic citations are plain text and identify cited works, without outbound links.
 
 Keep the entire folder together when copying or sharing it. Nothing is published automatically.
+
+## Alignment with the main paper (15 September 2026)
+
+Table A9(a) reports the retrieval-stage ablation under visible-mask IoU >= 0.1. The retrieval-mechanism comparison in A9(c) uses the two indoor subsets. Table A6 follows the main paper’s results, including the ScanNet–5 DAAAM+G MRR of 0.371. The A2 study holds targets and queries fixed to measure robustness across acquisition conditions. The eight Spot query outcomes, including two failures, are listed in Table A11.
+
+The paper and native HTML share the same method definitions and evaluation scope. The source PDFs were rebuilt and visually checked. All video files are unchanged.
