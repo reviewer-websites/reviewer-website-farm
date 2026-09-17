@@ -1,0 +1,1430 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer"><meta name="description" content="FARM supplementary videos and appendix for anonymous review."><meta http-equiv="Content-Security-Policy" content="default-src 'self' file:; script-src 'self' file:; style-src 'self' file:; img-src 'self' file: data:; media-src 'self' file:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>FARM · Supplementary material</title><link rel="stylesheet" href="styles.css?v=a2-setup"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23213c51'/%3E%3Cpath d='M10 25V7h14v4H14v4h8v4h-8v6' fill='white'/%3E%3C/svg%3E"><script src="app.js?v=related-work" defer></script></head>
+<body><button class="skip" data-scroll="videos">Skip to videos</button><header class="topbar"><div class="brand">FARM <span>Supplementary material</span></div><nav aria-label="On this page"><button data-scroll="videos">Videos</button><button data-scroll="reading-guide">Reading guide</button><button data-scroll="appendix">Appendix</button></nav></header>
+<main><section class="intro"><p class="eyebrow">ANONYMOUS REVIEW</p><h1>Find Anything using<br>Relational Spatial Memory</h1><p class="intro-line">Watch the demonstrations, then explore the appendix.</p></section>
+<section id="videos" aria-labelledby="videos-title"><div class="block-heading"><h2 id="videos-title">Video demonstrations</h2><span>Three short clips &amp; the full video</span></div><div class="video-layout"><div class="player-shell"><video id="demo-video" controls playsinline preload="none" poster="assets/posters/mapping.jpg" aria-label="Large-scale outdoor mapping demonstration"><source src="assets/videos/mapping.mp4" type="video/mp4">Your browser does not support MP4 playback.</video><p id="video-error" hidden>The video could not be loaded. Keep the assets folder alongside index.html.</p></div><div class="video-menu" role="tablist" aria-label="Choose a demonstration"><button id="tab-mapping" role="tab" aria-selected="true" aria-controls="video-caption" data-video="mapping"><span class="clip-number">01</span><span><strong>Large-scale outdoor mapping</strong><small>Object memory in expansive environments</small></span><span class="duration">0:14</span></button><button id="tab-retrieval" role="tab" aria-selected="false" tabindex="-1" aria-controls="video-caption" data-video="retrieval"><span class="clip-number">02</span><span><strong>Real-robot navigation</strong><small>From relational queries to physical goals</small></span><span class="duration">0:35</span></button><button id="tab-scale" role="tab" aria-selected="false" tabindex="-1" aria-controls="video-caption" data-video="scale"><span class="clip-number">03</span><span><strong>Three orders of magnitude</strong><small>Evaluated scene areas: 15–15,000 m²</small></span><span class="duration">0:09</span></button><button id="tab-full" role="tab" aria-selected="false" tabindex="-1" aria-controls="video-caption" data-video="full"><span class="clip-number">04</span><span><strong>Full supplementary video</strong><small>Complete demonstration sequence</small></span><span class="duration">4:31</span></button><div class="video-note">Select a clip, then press play.<br>Use fullscreen to inspect the details.</div></div></div><div id="video-caption" class="video-caption" role="tabpanel" aria-labelledby="tab-mapping"><p id="caption-text">Watch FARM build object memory across a large outdoor environment, then continue mapping in a warehouse.</p><button id="video-appendix" class="text-button" data-scroll="section-iii-a">Method details · Appendix III-A</button></div><div id="full-chapters" hidden><div class="chapters" aria-label="Full video chapters"><button data-time="0">0:00 <span>Opening demonstrations</span></button><button data-time="40">0:40 <span>Memory &amp; retrieval</span></button><button data-time="96">1:36 <span>Scenes &amp; evaluation</span></button><button data-time="144">2:24 <span>Qualitative examples</span></button><button data-time="216">3:36 <span>Onboard robot demonstration</span></button></div></div></section>
+<section id="reading-guide" class="reading-guide" aria-labelledby="guide-title"><div><p class="eyebrow">WHERE TO LOOK</p><h2 id="guide-title">A short reading guide</h2><p>Start with the clips for intuition. Choose a path below for the details you want to check.</p></div><div class="reading-paths"><button data-scroll="section-ii"><span class="path-index">01</span><span><strong>Understand relational grounding</strong><small>Worked example → formulation → detailed method</small></span><span class="path-destination">II · I · III</span></button><button data-scroll="section-v"><span class="path-index">02</span><span><strong>Check the experimental evidence</strong><small>Dataset card → protocols → full results and ablations</small></span><span class="path-destination">IV · V</span></button><button data-scroll="section-v-k"><span class="path-index">03</span><span><strong>Inspect the robot studies</strong><small>Acquisition, replay, and navigation</small></span><span class="path-destination">V-K–L</span></button></div></section>
+
+<section id="appendix" aria-labelledby="appendix-title"><div class="appendix-intro"><p class="eyebrow">ADDITIONAL DETAILS</p><h2 id="appendix-title">Appendix</h2><p>Read the complete appendix below. Use the contents to jump to a section, or your browser’s Find command to locate a term.</p></div><div class="appendix-layout"><nav class="appendix-nav" aria-label="Appendix contents"><button class="toc-level-2" data-scroll="section-i"><span>I</span>Retrieval Formulation and Inference</button><button class="toc-level-3" data-scroll="section-i-a"><span>I-A</span>Notation Reference for the Retrieval Formulation</button><button class="toc-level-2" data-scroll="section-ii"><span>II</span>Relational Disambiguation Example</button><button class="toc-level-2" data-scroll="section-iii"><span>III</span>Detailed Method</button><button class="toc-level-3" data-scroll="section-iii-a"><span>III-A</span>Memory Construction Details</button><button class="toc-level-3" data-scroll="section-iii-b"><span>III-B</span>Retrieval Details</button><button class="toc-level-2" data-scroll="section-iv"><span>IV</span>FARM-Scenes</button><button class="toc-level-2" data-scroll="section-v"><span>V</span>Evaluation Details and Extended Results</button><button class="toc-level-3" data-scroll="section-v-a"><span>V-A</span>Datasets</button><button class="toc-level-3" data-scroll="section-v-b"><span>V-B</span>Algorithms</button><button class="toc-level-3" data-scroll="section-v-c"><span>V-C</span>DAAAM Reconstruction Configuration</button><button class="toc-level-3" data-scroll="section-v-d"><span>V-D</span>Evaluation Metrics</button><button class="toc-level-3" data-scroll="section-v-e"><span>V-E</span>Latency and Accuracy vs. Scene Scale</button><button class="toc-level-3" data-scroll="section-v-f"><span>V-F</span>Grounding Accuracy</button><button class="toc-level-3" data-scroll="section-v-g"><span>V-G</span>Component Comparisons</button><button class="toc-level-3" data-scroll="section-v-h"><span>V-H</span>Association Features</button><button class="toc-level-3" data-scroll="section-v-i"><span>V-I</span>Retrieval-Stage Analysis</button><button class="toc-level-3" data-scroll="section-v-j"><span>V-J</span>Additional Relational Retrieval Examples</button><button class="toc-level-3" data-scroll="section-v-k"><span>V-K</span>Spot Demonstration: Acquisition, Replay, and Navigation</button><button class="toc-level-3" data-scroll="section-v-l"><span>V-L</span>Robustness to Acquisition Conditions on Unitree A2</button><button class="toc-level-2" data-scroll="references"><span></span>References</button></nav><div class="appendix-prose"><section class="appendix-scope"><h3>Overview</h3>
+<p>This appendix provides the retrieval formulation, implementation details, dataset annotation and acquisition protocols, full evaluation results, and robot experiments. Table A6 reports visible-mask retrieval accuracy, and Table A9 examines memory construction and retrieval components. The Unitree A2 study evaluates robustness across acquisition conditions; the Spot demonstration connects object retrieval to navigation.</p>
+</section><section class="appendix-chapter"><h2 id="section-i"><span class="section-number">I</span> Retrieval Formulation and Inference</h2>
+<h4>Query compilation</h4>
+<p>Table A1 summarizes the notation used in this formulation. A parser compiles <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math> into a typed specification <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Π</mi><mo stretchy="false" form="prefix">(</mo><mi>q</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">}</mo><mo>,</mo><msub><mi mathvariant="script">𝒮</mi><mi>q</mi></msub><mo>,</mo><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Pi(q) = (x_\star, \{a_1, \ldots, a_m\}, \mathcal{S}_q, \Phi_q)</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mo>⋆</mo></msub><annotation encoding="application/x-tex">x_\star</annotation></semantics></math> is the <em>target</em> variable, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">a_1, \ldots, a_m</annotation></semantics></math> are <em>anchor</em> variables, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>q</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_q</annotation></semantics></math> attaches to each target and anchor variable an open-vocabulary description <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math> (e.g. “tall lamp”, “white DBE delivery van”), and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub><annotation encoding="application/x-tex">\Phi_q</annotation></semantics></math> lists relational predicates over those variables. We write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>σ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">s_\sigma(v)</annotation></semantics></math> for the unary predicate that variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math> satisfies description <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>, and each relation as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\rho(\mathbf{v};\alpha)</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math> is the predicate name, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math> is the tuple of variables it relates, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> denotes any additional argument or parameter. Equivalently, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math> becomes a logical formula with one free variable, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><msub><mi>φ</mi><mi>q</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∃</mo><mspace width="0.167em"></mspace><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub><mspace width="0.278em"></mspace><mo minsize="180%" maxsize="180%" stretchy="true" form="prefix">(</mo></mtd><mtd columnalign="left"><munder><mo>⋀</mo><mrow><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo>,</mo><mi>σ</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msub><mi mathvariant="script">𝒮</mi><mi>q</mi></msub></mrow></munder><msub><mi>s</mi><mi>σ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mi>∧</mi><munder><mo>⋀</mo><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub></mrow></munder><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="180%" maxsize="180%" stretchy="true" form="postfix">)</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+\varphi_q(x_\star) = \exists\, a_1, \ldots, a_m \;\Big(&amp;\bigwedge_{(v, \sigma) \in \mathcal{S}_q} s_\sigma(v)\\
+&amp;\wedge\bigwedge_{\rho(\mathbf{v}; \alpha) \in \Phi_q}\rho(\mathbf{v}; \alpha)\Big),
+\end{aligned}</annotation></semantics></math> so the target is the only free variable and anchors exist only to constrain it through the predicates that mention them. Predicate <em>names</em> are selected from a fixed set of sixteen spatial and semantic relations (<span class="sans-serif">Near</span>, <span class="sans-serif">On</span>, <span class="sans-serif">Above</span>, <span class="sans-serif">Below</span>, <span class="sans-serif">NextTo</span>, <span class="sans-serif">Between</span>, <span class="sans-serif">Inside</span>, <span class="sans-serif">InRegion</span>, <span class="sans-serif">LeftOf</span>, <span class="sans-serif">RightOf</span>, <span class="sans-serif">InFrontOf</span>, <span class="sans-serif">Behind</span>, <span class="sans-serif">Closest</span>, <span class="sans-serif">Farthest</span>, <span class="sans-serif">HasAttribute</span>, <span class="sans-serif">IsCategory</span>), while predicate <em>arguments</em> – target descriptions, attribute strings, region phrases – remain open-vocabulary.  For the example in Figure 1 of the main paper, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Π</mi><mo stretchy="false" form="prefix">(</mo><mi>q</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Pi(q)</annotation></semantics></math> has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒮</mi><mi>q</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>↦</mo><mtext mathvariant="normal">“tall lamp”</mtext><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>↦</mo><mtext mathvariant="normal">“dartboard”</mtext><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>↦</mo><mtext mathvariant="normal">“poster”</mtext><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{S}_q = \{x_\star \mapsto \text{``tall lamp&#39;&#39;}, a_1 \mapsto \text{``dartboard&#39;&#39;}, a_2 \mapsto \text{``poster&#39;&#39;}\}</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="sans-serif">𝖡𝖾𝗅𝗈𝗐</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mtext mathvariant="sans-serif">𝖫𝖾𝖿𝗍𝖮𝖿</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\Phi_q = \{\textsf{Below}(x_\star, a_1), \textsf{LeftOf}(x_\star, a_2)\}</annotation></semantics></math>.</p>
+<h4>Soft verification</h4>
+<p>The memory <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℳ</mi><mi>t</mi></msub><annotation encoding="application/x-tex">\mathcal{M}_t</annotation></semantics></math> supplies the interpretation of the logical formula <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>φ</mi><mi>q</mi></msub><annotation encoding="application/x-tex">\varphi_q</annotation></semantics></math>: each entity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="script">ℰ</mi><mi>t</mi><mi>i</mi></msubsup><annotation encoding="application/x-tex">\mathcal{E}_t^i</annotation></semantics></math> exposes feature functions (location, 3D extent, embeddings, captions, and views) read from its stored attributes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="script">𝒜</mi><mi>t</mi><mi>i</mi></msubsup><annotation encoding="application/x-tex">\mathcal{A}_t^i</annotation></semantics></math>. Against these, a description is scored as a soft unary match and a predicate as a soft relation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>σ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>r</mi><mrow><mi>ρ</mi><mo>,</mo><mi>α</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>e</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">s_\sigma(e) \in [0,1] \text{ and } r_{\rho,\alpha}(e_1,\ldots,e_k) \in [0,1],</annotation></semantics></math> where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>,</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>e</mi><mi>k</mi></msub><mo>∈</mo><msub><mi mathvariant="script">ℰ</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">e,e_1,\ldots,e_k \in \mathcal{E}_t</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>ρ</mi><mo>,</mo><mi>α</mi></mrow></msub><annotation encoding="application/x-tex">r_{\rho,\alpha}</annotation></semantics></math> is the soft score for predicate <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi>⋅</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\rho(\cdot;\alpha)</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> is the arity of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>. Thus, perception and language uncertainty enter as preferences rather than as hard filters. A <em>binding</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>:</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">}</mo><mo>→</mo><msub><mi mathvariant="script">ℰ</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">\eta: \{x_\star, a_1, \ldots, a_m\} \to \mathcal{E}_t</annotation></semantics></math> assigns each variable a memory entity, and is verified by aggregating the unary and relational scores it induces, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mrow><mi mathvariant="normal">V</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">y</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">Agg</mi><mo>&#8289;</mo></mrow><mspace width="-0.167em"></mspace><mo minsize="180%" maxsize="180%" stretchy="true" form="prefix">(</mo></mtd><mtd columnalign="left"><mo stretchy="false" form="prefix">{</mo><msub><mi>s</mi><mi>σ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">}</mo><mrow><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo>,</mo><mi>σ</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msub><mi mathvariant="script">𝒮</mi><mi>q</mi></msub></mrow></msub></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mi>∪</mi><mo stretchy="false" form="prefix">{</mo><msub><mi>r</mi><mrow><mi>ρ</mi><mo>,</mo><mi>α</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">}</mo><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub></mrow></msub><mo minsize="180%" maxsize="180%" stretchy="true" form="postfix">)</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+\mathrm{Verify}(\eta) = \operatorname{Agg}\!\Big(&amp;\{s_\sigma(\eta(v))\}_{(v,\sigma)\in\mathcal{S}_q}\\
+&amp;\cup\{r_{\rho,\alpha}(\eta(\mathbf{v}))\}_{\rho(\mathbf{v};\alpha)\in\Phi_q}\Big),
+\end{aligned}</annotation></semantics></math> where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(\mathbf{v})</annotation></semantics></math> applies the binding componentwise to the tuple <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Agg</mi><annotation encoding="application/x-tex">\operatorname{Agg}</annotation></semantics></math> combines the semantic and relational scores into a single soft constraint-satisfaction score. A candidate target <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> is scored by its best witnessing binding, and retrieval returns the top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="center"><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>;</mo><mi>q</mi><mo>,</mo><msub><mi mathvariant="script">ℳ</mi><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mi mathvariant="normal">max</mi><mrow><mi>η</mi><mo>:</mo><mspace width="0.167em"></mspace><mi>η</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>e</mi></mrow></munder><mrow><mi mathvariant="normal">V</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">y</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign="center"><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mrow><mi mathvariant="normal">TopK</mi><mo>&#8289;</mo></mrow><mrow><mi>e</mi><mo>∈</mo><msub><mi mathvariant="script">ℰ</mi><mi>t</mi></msub></mrow></msub><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>;</mo><mi>q</mi><mo>,</mo><msub><mi mathvariant="script">ℳ</mi><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{gathered}
+\mathrm{score}(e;q,\mathcal{M}_t)=\max_{\eta:\,\eta(x_\star)=e}\mathrm{Verify}(\eta),\\
+\hat{y}=\operatorname{TopK}_{e\in\mathcal{E}_t}\mathrm{score}(e;q,\mathcal{M}_t).
+\end{gathered}</annotation></semantics></math> This objective is approximated in FARM by greedy anchor binding, followed by the bounded semantic–geometric score and optional reranking described in Section III-B. An optional action interface <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Ψ</mi><mi>t</mi></msub><annotation encoding="application/x-tex">\Psi_t</annotation></semantics></math> maps the chosen entity to a navigable or viewing pose.</p>
+<h4>Query-time complexity</h4>
+<p>Exact binding cost depends on the query factor graph and candidate-set sizes. The following bounds characterize the query structure underlying the objective. A typical referring expression forms a <em>star</em>: one target <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mo>⋆</mo></msub><annotation encoding="application/x-tex">x_\star</annotation></semantics></math> connected to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> anchors <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>i</mi></msub><annotation encoding="application/x-tex">a_i</annotation></semantics></math> by independent predicates <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\rho_i(x_\star, a_i)</annotation></semantics></math>. For a decomposable score, conditioning on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mo>⋆</mo></msub><annotation encoding="application/x-tex">x_\star</annotation></semantics></math> separates the anchors, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><munder><mi mathvariant="normal">max</mi><mrow><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow></munder><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msub><mi>ρ</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mspace width="2.0em"></mspace><mo>=</mo><munder><mi mathvariant="normal">max</mi><msub><mi>x</mi><mo>⋆</mo></msub></munder><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><munder><mi mathvariant="normal">max</mi><msub><mi>a</mi><mi>i</mi></msub></munder><msub><mi>ρ</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+&amp;\max_{x_\star,a_1,\ldots,a_m}\sum_{i=1}^m\rho_i(x_\star,a_i)\\
+&amp;\qquad=\max_{x_\star}\sum_{i=1}^m\max_{a_i}\rho_i(x_\star,a_i),
+\end{aligned}</annotation></semantics></math> so exact binding on a star costs <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><msub><mi>K</mi><mi>t</mi></msub><msub><mi>K</mi><mi>a</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(|\Phi_q|\, K_t K_a)</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>t</mi></msub><mo>,</mo><msub><mi>K</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">K_t, K_a</annotation></semantics></math> bound the target and per-anchor candidate counts – rather than the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>K</mi><mi>t</mi></msub><msubsup><mi>K</mi><mi>a</mi><mi>m</mi></msubsup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(K_t K_a^m)</annotation></semantics></math> of exhaustive joint enumeration. Higher-arity predicates such as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="sans-serif">𝖡𝖾𝗍𝗐𝖾𝖾𝗇</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mi>p</mi></msub><mo>,</mo><msub><mi>a</mi><mi>q</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\textsf{Between}(x_\star, a_p, a_q)</annotation></semantics></math> couple only the variables they mention; more generally, exact bucket elimination on a query factor graph of treewidth <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> costs <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><msup><mi>K</mi><mrow><mi>b</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(|\Phi_q|\, K^{b+1})</annotation></semantics></math> [1].</p>
+<h3 id="section-i-a"><span class="section-number">I-A</span> Notation Reference for the Retrieval Formulation</h3>
+<p>The notation expresses retrieval as soft constraint satisfaction over memory entities: descriptions and relations specify the evidence used to rank each target candidate.</p>
+<div class="evidence-table" id="table-a1"><div class="table-caption"><span class="evidence-label">Table A1</span> <p>Notation used in the robust relational retrieval formulation.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A1 ; scroll horizontally if needed"><table aria-label="Table A1 ">
+
+<thead>
+<tr>
+<th><strong>Symbol</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math></td>
+<td>Natural-language referring query.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Π</mi><mo stretchy="false" form="prefix">(</mo><mi>q</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Pi(q)</annotation></semantics></math></td>
+<td>Parsed query specification.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mo>⋆</mo></msub><annotation encoding="application/x-tex">x_\star</annotation></semantics></math></td>
+<td>Target variable: the object to retrieve.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">a_1,\ldots,a_m</annotation></semantics></math></td>
+<td>Anchor variables: contextual objects used to identify the target.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>q</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_q</annotation></semantics></math></td>
+<td>Variable-to-description map, e.g., <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mo>⋆</mo></msub><mo>↦</mo></mrow><annotation encoding="application/x-tex">x_\star \mapsto</annotation></semantics></math> “tall lamp”.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Φ</mi><mi>q</mi></msub><annotation encoding="application/x-tex">\Phi_q</annotation></semantics></math></td>
+<td>Set of relational predicates, e.g., <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="sans-serif">𝖡𝖾𝗅𝗈𝗐</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\textsf{Below}(x_\star,a_1)</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>σ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">s_\sigma(v)</annotation></semantics></math></td>
+<td>Unary description predicate: variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math> matches text description <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\rho(\mathbf{v};\alpha)</annotation></semantics></math></td>
+<td>Relation predicate with variables <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math> and optional argument <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>φ</mi><mi>q</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\varphi_q(x_\star)</annotation></semantics></math></td>
+<td>Logical form of the query, with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mo>⋆</mo></msub><annotation encoding="application/x-tex">x_\star</annotation></semantics></math> as the only free variable.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math></td>
+<td>Binding from query variables to memory entities.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>ρ</mi><mo>,</mo><mi>α</mi></mrow></msub><annotation encoding="application/x-tex">r_{\rho,\alpha}</annotation></semantics></math></td>
+<td>Soft score for relation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi>⋅</mi><mo>;</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\rho(\cdot;\alpha)</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">V</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">y</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{Verify}(\eta)</annotation></semantics></math></td>
+<td>Compatibility score of a complete binding.</td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>;</mo><mi>q</mi><mo>,</mo><msub><mi mathvariant="script">ℳ</mi><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{score}(e;q,\mathcal{M}_t)</annotation></semantics></math></td>
+<td>Best verification score when entity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> is fixed as the target.</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>To read the formula for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>φ</mi><mi>q</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mo>⋆</mo></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\varphi_q(x_\star)</annotation></semantics></math>, interpret <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">\exists a_1,\ldots,a_m</annotation></semantics></math> as “choose some anchor entities from memory,” <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⋀</mo><annotation encoding="application/x-tex">\bigwedge</annotation></semantics></math> as “satisfy all listed descriptions and relations jointly,” and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mo>⋆</mo></msub><annotation encoding="application/x-tex">x_\star</annotation></semantics></math> as the only variable whose binding is returned as the answer. For example, in “the lamp below the dartboard and to the left of the poster,” the lamp is the target, while the dartboard and poster are anchors that help disambiguate it.</p>
+<p>Unlike classical logic, these predicates are evaluated softly. A description match <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>σ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">s_\sigma(e)</annotation></semantics></math> and a relation match <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>ρ</mi><mo>,</mo><mi>α</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>e</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">r_{\rho,\alpha}(e_1,\ldots,e_k)</annotation></semantics></math> produce scores in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math> rather than binary truth values. Thus, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">V</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">y</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{Verify}(\eta)</annotation></semantics></math> measures how well one complete assignment of variables to memory entities satisfies the query, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>;</mo><mi>q</mi><mo>,</mo><msub><mi mathvariant="script">ℳ</mi><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{score}(e;q,\mathcal{M}_t)</annotation></semantics></math> keeps the best such assignment among all bindings that choose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> as the target.</p>
+</section><section class="appendix-chapter"><h2 id="section-ii"><span class="section-number">II</span> Relational Disambiguation Example</h2>
+<p>Consider the query <em>“Find the tall lamp below the dartboard and to the left of the poster.”</em> The parser assigns “tall lamp” to the target description and “dartboard” and “poster” to two anchor descriptions. These descriptions retrieve plausible entities independently, preserving the distinction between the object to return and the objects that identify it.</p>
+<p>FARM then scores each candidate lamp using its semantic match and the requested <span class="sans-serif">Below</span> and <span class="sans-serif">LeftOf</span> relations to the bound anchors. The lamp’s height contributes through the target description; its position relative to the dartboard and poster contributes through the predicate scores. The bounded spatial factor refines the semantic ranking, and visual verification resolves the final ordering among the top candidates. The returned entity is the lamp, accompanied by the anchor bindings and stored viewpoint needed to interpret and act on the result.</p>
+</section><section class="appendix-chapter"><h2 id="section-iii"><span class="section-number">III</span> Detailed Method</h2>
+<h3 id="section-iii-a"><span class="section-number">III-A</span> Memory Construction Details</h3>
+<p>Each entity carries a fixed-dimensional Gaussian, an adaptive voxel cloud capped at 1,000 keys, and at most 256 retained views. Voxel storage starts at a 5 mm base resolution and coarsens per object to satisfy the cap. These mechanisms bound retained geometric and visual evidence per entity without choosing a scene-wide voxel resolution. Appearance matching scales with detections and active entities; initial retrieval scores the active pool, and geometric relations are evaluated for query candidates.</p>
+<p>GPU vectorization accelerates mask pooling from per-image DINO features, detection-to-entity feature comparisons, Hellinger gating, and scatter-add fusion. Union-find and cannot-link bookkeeping run on the CPU. Bounded, non-blocking queues decouple captioning and embedding from the synchronous loop. For every method in the desktop runtime comparison, all VLM inference runs on an NVIDIA RTX PRO 6000, while the remaining mapping computation runs on an NVIDIA RTX 5090. In the real-robot experiments, the entire FARM pipeline runs on NVIDIA Jetson Thor.</p>
+<div class="evidence-table" id="table-a2"><div class="table-caption"><span class="evidence-label">Table A2</span> <p><strong>Memory design and computational cost.</strong></p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A2 ; scroll horizontally if needed"><table aria-label="Table A2 ">
+<thead>
+<tr>
+<th>Principle</th>
+<th>Mechanisms and benefit</th>
+<th>Computational cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organize computation around entities and observations</td>
+<td>Fixed-dimensional Gaussians, capped adaptive voxel clouds, bounded views, and query-time predicates avoid scene-wide spatial discretization and exhaustive relation construction.</td>
+<td>Appearance matching costs <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mi>N</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(DN)</annotation></semantics></math> for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> detections and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> entities; Gaussian fusion uses constant-size sufficient statistics. Voxel and view caps bound retained evidence per entity.</td>
+</tr>
+<tr>
+<td>Vectorize mapping and decouple semantic enrichment</td>
+<td>Batched GPU operations accelerate feature comparison and fusion; bounded queues keep model calls off the synchronous mapping path.</td>
+<td>Mapping latency measures the synchronous update loop. Captioning and embedding run in background workers; semantic availability includes their execution and queueing time.</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>The following details expand the synchronous per-frame loop and asynchronous enrichment introduced in Section III-B of the main paper.</p>
+<h4>Per-frame synchronous update</h4>
+<p>For each incoming RGB-D batch, the pipeline executes the following seven steps, followed by a periodic pruning pass.</p>
+<ol>
+<li><p><em>Segmentation.</em> An open-vocabulary detector [2] produces per-image masks together with classification-head features used as compact per-detection embeddings. Each detection is lifted into a 3D Gaussian <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>μ</mi><mi>d</mi></msub><mo>,</mo><msub><mi mathvariant="normal">Σ</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mu_d, \Sigma_d)</annotation></semantics></math> over the masked depth points, with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Σ</mi><mi>d</mi></msub><annotation encoding="application/x-tex">\Sigma_d</annotation></semantics></math> stored in a 6-vector packed form. An optional dense backbone [3] provides per-token features that are mean-pooled over the mask when richer visual descriptors are desired.</p></li>
+<li><p><em>Filtering.</em> A sequence of efficient filtering tests removes masks touching the image border, masks with too few foreground pixels, masks beyond the reliable depth range, detections labeled with uninformative open-vocabulary classes (e.g. walls and floors), and finally near-duplicate masks (IoU). The retained set is the input to association.</p></li>
+<li><p><em>Neighbor search.</em> For each surviving detection we first restrict candidates to active entities whose per-detection feature is sufficiently similar, then compute the Hellinger distance between the detection’s 3D Gaussian and each candidate entity’s Gaussian [4], retaining every candidate entity within a fixed Hellinger budget, sorted by distance. The feature/class prefilter is a single batched detection-by-entity similarity matrix, so the more expensive Gaussian comparison runs only on the resulting sparse candidate set rather than on all detection–entity pairs. The result is a sparse detection-to-entity match graph that feeds association; a detection retaining two or more entities is what later bridges previously separate entities.</p></li>
+<li><p><em>Correspondence.</em> A union-find pass over the match graph with path compression resolves the case where multiple detections claim the same entity, and the case where one detection bridges two previously separate entities. The pass only assigns winner/loser pointers; the actual entity-level merge—in which the loser’s covisibility, captions, and identity history are absorbed by the winner—is carried out during the subsequent fusion step.</p></li>
+<li><p><em>Fusion.</em> Matched detections update the entity’s running Gaussian by sufficient-statistics merge (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>1</mn></msub><mo>=</mo><mi>w</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">M_1 = w\mu</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>2</mn></msub><mo>=</mo><mi>w</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Σ</mi><mo>+</mo><mi>μ</mi><msup><mi>μ</mi><mi>⊤</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">M_2 = w(\Sigma + \mu\mu^\top)</annotation></semantics></math> accumulated over detections), and update its appearance feature by a detection-count-weighted average. Entity-level merges flagged by the correspondence pass are also executed here, absorbing the loser’s covisibility, captions, view records, and identity history into the winner. Unmatched detections initialize new entities.</p></li>
+<li><p><em>High-quality view selection.</em> A new viewpoint is retained for an entity only if its viewing direction differs from all existing retained viewpoints by more than a fixed angular threshold, or if it is sufficiently closer than the closest existing viewpoint. Retained viewpoints are the inputs to the asynchronous caption stage.</p></li>
+<li><p><em>Covisibility update.</em> A bitset adjacency (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>×</mo><mo stretchy="false" form="prefix">⌈</mo><mi>N</mi><mi>/</mi><mn>64</mn><mo stretchy="false" form="postfix">⌉</mo></mrow><annotation encoding="application/x-tex">N \times \lceil N/64 \rceil</annotation></semantics></math> blocks) marks all pairs of entities that were jointly visible in the current batch; a parallel weighted edge dictionary accumulates their co-occurrence, restricted to spatially proximal pairs (a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>-nearest-neighbor graph in Gaussian Hellinger distance with a soft median cutoff) and discounted by a temporal decay. These structures record co-observation history; query-time relations are computed directly from entity attributes.</p></li>
+</ol>
+<h4>Asynchronous visual-language enrichment</h4>
+<p>The synchronous loop dispatches an enrichment task when an entity&#x27;s selected views change. A background worker sends the crops to Qwen3.5-9B and obtains a structured caption. Qwen3-Embedding-0.6B embeds the caption, while SigLIP2 and Qwen3-VL-Embedding-2B embed the selected crop. The worker writes the caption and embeddings back to the entity. Bounded queues keep model calls off the synchronous update path; when a queue is full, incoming enrichment work is dropped. Semantic availability includes model execution and queueing time.</p>
+<h4>Why a single Gaussian per entity?</h4>
+<p>The Gaussian supplies a fixed-dimensional geometric summary for association, while the capped adaptive voxel cloud retains observed extent. Once a detection has been summarized, its first and second moments admit constant-size sufficient-statistics updates. Gaussian Hellinger distance supplies a unitless, bounded matching score, supporting reuse of the association threshold across the evaluated scales. Image processing, association, and voxel maintenance determine the remaining update cost.</p>
+<h4>Mechanisms and supporting experiments</h4>
+<p>FARM couples identity maintenance, evidence retention, and query-time scoring. Appearance and Gaussian geometry gate candidate associations; same-image exclusion prevents distinct co-observed detections from collapsing to one identity. The association-feature substitution compares DINO and YOLOE with the same multi-embedding retriever (ScanNet–5 A@1: 23.5% versus 17.6%). The common-text-retriever comparison measures the utility of the complete constructed memories.</p>
+<p>Bounded voxel support preserves observed extent, and selected posed crops supply captioning, image retrieval, and directional predicates. Captions and embeddings are updated asynchronously as selected views change. The resource measurements report the cost of the integrated memory construction pipeline.</p>
+<h3 id="section-iii-b"><span class="section-number">III-B</span> Retrieval Details</h3>
+<p>This appendix expands the grounding pipeline summarized in Section III-C of the main paper. Each stage either narrows the candidate set or refines the score; the predicates named by the query – not the full inventory of relations – determine the work done at query time.</p>
+<ol>
+<li><p><em>Query parsing.</em> Qwen3.5-9B parses the query into a structured record holding a modifier-rich target description (e.g. “red chair”), a bare target-class noun (“chair”), and an ordered list of predicate invocations. Predicate <em>names</em> are drawn from a fixed vocabulary of sixteen spatial and semantic relations, <span class="sans-serif">Near</span>, <span class="sans-serif">On</span>, <span class="sans-serif">Above</span>, <span class="sans-serif">Below</span>, <span class="sans-serif">NextTo</span>, <span class="sans-serif">Between</span>, <span class="sans-serif">Inside</span>, <span class="sans-serif">InRegion</span>, <span class="sans-serif">LeftOf</span>, <span class="sans-serif">RightOf</span>, <span class="sans-serif">InFrontOf</span>, <span class="sans-serif">Behind</span>, <span class="sans-serif">Closest</span>, <span class="sans-serif">Farthest</span>, <span class="sans-serif">HasAttribute</span>, <span class="sans-serif">IsCategory</span>, while predicate <em>arguments</em> (target and landmark descriptions, attribute strings, region labels) are open-vocabulary natural-language phrases. </p></li>
+<li><p><em>Region scoping.</em> If the parsed query carries a region constraint and the scene provides region labels, the region phrase is embedded and matched against the stored labels (exact match, then cosine fallback), and entities outside the matched region are dropped from the candidate pool. This stage is skipped when the query has no region constraint or the scene has no region annotations.</p></li>
+<li><p><em>Candidate retrieval.</em> The candidate pool is the set of <em>active</em> entities – those flagged active in the scene state, carrying a caption and the per-object embeddings – within the scoped region. Rather than truncating to a top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, we rank the entire pool by reciprocal-rank fusion (each channel contributes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>μ</mi><mo>+</mo><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">k</mi></mrow><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">w/(\mu + \mathrm{rank})</annotation></semantics></math> with offset <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\mu{=}5</annotation></semantics></math>) over four query channels spanning three embedding spaces: the caption-text embedding (Qwen3-Embedding-0.6B) queried with the modifier-rich target description (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>1.0</mn></mrow><annotation encoding="application/x-tex">w{=}1.0</annotation></semantics></math>) and again with the raw utterance (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">w{=}0.5</annotation></semantics></math>); the SigLIP2 image embedding queried with a short text-prompt ensemble (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>0.75</mn></mrow><annotation encoding="application/x-tex">w{=}0.75</annotation></semantics></math>); and the Qwen3-VL image embedding queried with the target description (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>1.0</mn></mrow><annotation encoding="application/x-tex">w{=}1.0</annotation></semantics></math>). The fused rank score is the entity’s target similarity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi></mrow></msub><annotation encoding="application/x-tex">s_{\mathrm{sem}}</annotation></semantics></math>; landmark variables referenced by the predicates are retrieved analogously.</p></li>
+<li><p><em>Predicate evaluation.</em> Predicates are evaluated from entity geometry, stored views, and semantic attributes, returning soft membership scores in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math>: <span class="sans-serif">Near</span> uses a Gaussian on the inter-centroid distance (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\sigma{=}0.5</annotation></semantics></math> m) and <span class="sans-serif">NextTo</span> a wider Gaussian on the same distance (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>1.0</mn></mrow><annotation encoding="application/x-tex">\sigma{=}1.0</annotation></semantics></math> m); <span class="sans-serif">Above</span>/<span class="sans-serif">Below</span> a sigmoid on the vertical offset; <span class="sans-serif">On</span> a horizontal-distance gate times a vertical band; <span class="sans-serif">Inside</span>/<span class="sans-serif">InRegion</span> a containment test; <span class="sans-serif">Closest</span>/<span class="sans-serif">Farthest</span> a rank within the candidate set (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">score</mtext><mo>=</mo><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mtext mathvariant="normal">rank</mtext><mo>−</mo><msup><mi>r</mi><mo>⋆</mo></msup><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\textrm{score}=1/(|\textrm{rank}-r^\star|+1)</annotation></semantics></math>); and the viewpoint-dependent <span class="sans-serif">LeftOf</span>, <span class="sans-serif">RightOf</span>, <span class="sans-serif">InFrontOf</span>, <span class="sans-serif">Behind</span> are evaluated in stored camera views of each target candidate – left/right from the anchor-relative horizontal offset of mask centroids on the image plane, front/behind from relative camera-frame depth. <span class="sans-serif">IsCategory</span> uses a tiered class match (the entity’s YOLOE category when it matches, else a caption fallback), and <span class="sans-serif">HasAttribute</span> matches the attribute string against the caption and stored attributes through embedding. Landmarks are bound greedily to their top-scoring candidates.</p></li>
+<li><p><em>Composite scoring.</em> For each target candidate we reduce its predicate scores to a geometric mean <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>g</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{g}</annotation></semantics></math> (sensitive to small terms before the bounded blend) and blend it with the target similarity as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msub><mi>s</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi></mrow></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">[</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>w</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>w</mi><mspace width="0.167em"></mspace><mover><mi>g</mi><mo accent="true">‾</mo></mover><mspace width="0.167em"></mspace><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">s = s_{\mathrm{sem}}\,[\,(1-w) + w\,\bar{g}\,]</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">w{=}0.5</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi></mrow></msub><annotation encoding="application/x-tex">s_{\mathrm{sem}}</annotation></semantics></math> is additionally scaled by a soft class factor (multiplied by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.3</mn><annotation encoding="application/x-tex">0.3</annotation></semantics></math> when the candidate’s class does not match the parsed target class). The blend lets spatial predicates re-rank semantically plausible candidates – pulling an unsatisfied candidate down toward half its similarity – without letting a single noisy predicate veto a strong semantic match. This bounded blend combines semantic and relational evidence in the soft query objective.</p></li>
+<li><p><em>Projected-view reranking.</em> The top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>5</mn><annotation encoding="application/x-tex">5</annotation></semantics></math> candidates are reranked by Qwen3.5-9B over <em>projected views</em>: for each candidate we render a candidate-centered schematic panel of the local scene geometry, with the candidate marked in red, the competing top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math> objects in blue, and the estimated viewing “front” direction in green. The numbered panels, together with the parsed predicates and base scores, are presented to the model, which returns a per-candidate evidence score in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math>; candidates are reordered by these scores (using the VLM scores directly, with the model’s reasoning mode disabled). This projected-view reranking defines <em>FARM</em>; omitting it gives the <em>FARM<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mo>∘</mo></msup><annotation encoding="application/x-tex">^{\circ}</annotation></semantics></math></em> ablation.</p></li>
+<li><p><em>Output.</em> The system returns ranked candidate records – a target entity, its composite score, the per-predicate score breakdown, and the bound landmark entities. The action interface <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Ψ</mi><mi>t</mi></msub><annotation encoding="application/x-tex">\Psi_t</annotation></semantics></math> converts the top entity into a navigable or viewing pose from the entity’s geometry and high-quality views.</p></li>
+</ol>
+<h4>Robustness of soft scoring</h4>
+<p>Separating candidate generation from predicate scoring exposes two stages of retrieval performance. A <em>candidate-recall</em> failure occurs when the true target is poorly mapped or never enters the candidate set retrieved from its description. A <em>relational-ranking</em> failure occurs when the target is in the set but noisy anchors, predicates, or reranking fail to surface it in the top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>. Soft scoring avoids hard deletion of candidate entities: with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Agg</mi><mo>&#8289;</mo></mrow><mo>=</mo><msub><mi>s</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi></mrow></msub><mo>⋅</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>w</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>w</mi><mspace width="0.167em"></mspace><mover><mi>g</mi><mo accent="true">‾</mo></mover><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\operatorname{Agg} = s_{\mathrm{sem}} \cdot \big[ (1 - w) + w\,\bar{g} \big]</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">m</mi></mrow></msub><mo>=</mo><msub><mi>s</mi><msub><mi>σ</mi><mo>⋆</mo></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">s_{\mathrm{sem}} = s_{\sigma_\star}(e)</annotation></semantics></math> is the target similarity, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>g</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{g}</annotation></semantics></math> is the geometric mean of predicate scores, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">w = 0.5</annotation></semantics></math>, the spatial factor stays in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>−</mo><mi>w</mi><mo>,</mo><mspace width="0.167em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[1 - w,\, 1]</annotation></semantics></math>, so a wrong anchor or noisy predicate can at most halve a candidate’s semantic score but never deletes it.  Hard-filtering requires every anchor constraint to pass, so an error in any one constraint can discard the target.</p>
+</section><section class="appendix-chapter"><h2 id="section-iv"><span class="section-number">IV</span> FARM-Scenes</h2>
+<figure class="evidence-figure" id="figure-a1"><img src="assets/figures/scene-overview.webp" alt="Scene overview — Figure A1" width="2100" height="2199" loading="lazy" decoding="async"><figcaption><span class="evidence-label">Figure A1</span> <p><strong>FARM-Scenes.</strong> The seven FARM-Scenes cover diverse indoor and outdoor environments: (a) a warehouse [5], (b) an outdoor construction site [5], (c) an automotive museum [5], (d) a camping site, (e) an outdoor industrial facility, (f) a multi-floor office building, and (g) a school campus. For each scene, we show the reconstructed point cloud, annotated object instances and relational annotations, robot camera trajectory, approximate scene extent, and representative RGB views. These scenes vary substantially in scale, object density, distractor frequency, and sensor configuration. The large outdoor scenes test online memory construction and retrieval over long trajectories, while the object-rich indoor scenes stress relational retrieval in the presence of many visually or semantically similar distractors.</p></figcaption></figure>
+<h4>Overview</h4>
+<p>FARM-Scenes is a curated benchmark of seven large-scale indoor and outdoor environments for evaluating online 3D memory construction and relational object retrieval, as illustrated in Figure A1. The benchmark spans construction, museum, warehouse, camping, industrial, office, and campus environments, covering a broad range of spatial scales, object densities, camera configurations, and distractor patterns. We summarize the scene statistics in Table A3.</p>
+<div class="evidence-table" id="table-a3"><div class="table-caption"><span class="evidence-label">Table A3</span> <p><strong>FARM-Scenes data card.</strong> For each scene, we report the environment type, setting, approximate area, approximate robot trajectory length, number of cameras, number of RGB-D frames, annotated object instances, and relational language queries.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A3 ; scroll horizontally if needed"><table aria-label="Table A3 ">
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Setting</strong></th>
+<th><strong>Area (m<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>2</mn></msup><annotation encoding="application/x-tex">^2</annotation></semantics></math>)</strong></th>
+<th><strong>Trajectory</strong></th>
+<th><strong>Cameras</strong></th>
+<th><strong>Frames</strong></th>
+<th><strong>Annotated Objects</strong></th>
+<th><strong>Queries</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a)</td>
+<td>warehouse</td>
+<td>Indoor</td>
+<td>4<span>,</span>000</td>
+<td>205 m</td>
+<td>3</td>
+<td>2<span>,</span>553</td>
+<td>163</td>
+<td>250</td>
+</tr>
+<tr>
+<td>b)</td>
+<td>construction site</td>
+<td>Outdoor</td>
+<td>10<span>,</span>000</td>
+<td>454 m</td>
+<td>3</td>
+<td>1<span>,</span>122</td>
+<td>147</td>
+<td>145</td>
+</tr>
+<tr>
+<td>c)</td>
+<td>automotive museum</td>
+<td>Indoor</td>
+<td>1<span>,</span>800</td>
+<td>160 m</td>
+<td>3</td>
+<td>513</td>
+<td>95</td>
+<td>203</td>
+</tr>
+<tr>
+<td>d)</td>
+<td>camping site</td>
+<td>Outdoor</td>
+<td>7<span>,</span>500</td>
+<td>683 m</td>
+<td>5</td>
+<td>1<span>,</span>274</td>
+<td>19</td>
+<td>24</td>
+</tr>
+<tr>
+<td>e)</td>
+<td>outdoor industrial facility</td>
+<td>Outdoor</td>
+<td>15<span>,</span>000</td>
+<td>1<span>,</span>267 m</td>
+<td>5</td>
+<td>2<span>,</span>270</td>
+<td>28</td>
+<td>50</td>
+</tr>
+<tr>
+<td>f)</td>
+<td>multi-floor office building</td>
+<td>Indoor</td>
+<td>2<span>,</span>400</td>
+<td>397 m</td>
+<td>1</td>
+<td>352</td>
+<td>147</td>
+<td>228</td>
+</tr>
+<tr>
+<td>g)</td>
+<td>school campus</td>
+<td>Outdoor</td>
+<td>6<span>,</span>000</td>
+<td>308 m</td>
+<td>1</td>
+<td>210</td>
+<td>46</td>
+<td>55</td>
+</tr>
+</tbody>
+</table></div></div>
+<h4>Annotation procedure</h4>
+<p>We annotate objects using an interactive Viser-based interface [6]. For each object of interest, an annotator selects 2D masks in one or more RGB frames, assisted by SAM2 [7] mask propagation. Masks corresponding to the same physical object across frames are projected into 3D using camera poses and depth, and we extract the object’s 3D bounding box from the resulting point cloud. Given the annotated objects, annotators then label relations by selecting object pairs and assigning the most appropriate spatial relation between them. Relations are chosen to be useful for retrieval, so that they can help disambiguate a target object from nearby, visually similar, or semantically similar distractors. We use Gemini [8] to assist with captioning ground-truth objects; all captions are manually verified and refined.</p>
+<h4>Scene selection rationale</h4>
+<p>We choose the construction site, camping site, outdoor industrial facility, and school campus to evaluate online memory construction and retrieval in large-scale outdoor environments with long trajectories. We choose the automotive museum, warehouse, and multi-floor office building to stress-test relational retrieval in object-rich indoor scenes with many distractors, including repeated cars in the museum, boxes and storage items in the warehouse, and repetitive furniture and equipment in the office building. Together, these scenes test whether a system can maintain an object-level memory online and use relational constraints to retrieve specific objects in cluttered, repetitive, and large-scale environments.</p>
+</section><section class="appendix-chapter"><h2 id="section-v"><span class="section-number">V</span> Evaluation Details and Extended Results</h2>
+<h3 id="section-v-a"><span class="section-number">V-A</span> Datasets</h3>
+<p>We evaluate on two complementary indoor referring-expression benchmarks: <em>ReferIt3D</em>  (NR3D + SR3D+) on ScanNet, and <em>IRef-VLA</em>  on HM3D. The ScanNet split emphasizes natural-language robustness: NR3D contains human-written descriptions, while SR3D+ contains synthetic relational descriptions over visually similar distractors. The HM3D split emphasizes scene scale: HM3D–30 averages 997 annotated instances per scene, compared with 80 on ScanNet–30 (about 12.5× more). FARM constructs 1,550 and 287 entities per scene, respectively (main-paper Table I). These counts distinguish evaluation annotations from the larger constructed object pool.</p>
+<p>To evaluate representation scalability, we select the 30 most complex scenes from each benchmark, ranked by number of annotated objects for ScanNet and number of regions for HM3D. For each scene, we cap the number of evaluated utterances at 1000, using deterministic stratified sampling to preserve the natural query distribution within each scene. On ScanNet, we stratify by <code>dataset</code> (NR3D or SR3D+) and <code>instance_type</code>; on HM3D, we stratify by <code>region_id</code> and <code>relation_type</code>. Scenes with fewer than 1000 utterances contribute all available utterances. This gives 43<span>,</span>076 indoor utterances: 13<span>,</span>076 from ScanNet and 30<span>,</span>000 from HM3D.</p>
+<p>We further introduce FARM-Scenes, a curated benchmark of seven large-scale indoor and outdoor environments captured with three platforms. FARM-Scenes complements the indoor benchmarks with outdoor distractors, long robot trajectories, and heterogeneous camera configurations. Together, ScanNet, HM3D, and FARM-Scenes form a 67-scene benchmark with 44<span>,</span>031 utterances, summarized in Table A4.</p>
+<div class="evidence-table" id="table-a4"><div class="table-caption"><span class="evidence-label">Table A4</span> <p><strong>Evaluation queries by benchmark split.</strong> ScanNet and HM3D provide indoor referring expressions from ReferIt3D and IRef-VLA, respectively. FARM-Scenes adds large-scale indoor/outdoor queries collected across three capture platforms.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A4 ; scroll horizontally if needed"><table aria-label="Table A4 ">
+<thead>
+<tr>
+<th><strong>Split</strong></th>
+<th><strong>Query source</strong></th>
+<th><strong>Scenes</strong></th>
+<th><strong>Utterances</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ScanNet</td>
+<td>ReferIt3D (NR3D + SR3D+)</td>
+<td>30</td>
+<td>13<span>,</span>076</td>
+</tr>
+<tr>
+<td>HM3D</td>
+<td>IRef-VLA</td>
+<td>30</td>
+<td>30<span>,</span>000</td>
+</tr>
+<tr>
+<td>FARM-Scenes</td>
+<td>Curated (large-scale)</td>
+<td>7</td>
+<td>955</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>67</strong></td>
+<td><strong>44<span>,</span>031</strong></td>
+</tr>
+</tbody>
+</table></div></div>
+<h4>HM3D RGB-D trajectories</h4>
+<p>ScanNet provides posed RGB-D sequences directly. HM3D provides textured meshes, so we render a posed RGB-D trajectory for each scene using <code>habitat-sim</code> 0.2.5. For each annotated ground-truth object, we sample 24 candidate viewpoints within <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mn>0.8</mn><mo>,</mo><mn>3.0</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">r\in[0.8,3.0]</annotation></semantics></math> m of the object centroid on the scene navmesh, select the closest viewpoint without severe occlusion, group accepted viewpoints by navmesh island to cover multi-floor scenes, and order viewpoints within each island by a greedy nearest-unvisited tour. Consecutive viewpoints are connected by navmesh-constrained shortest paths computed with Habitat-Sim’s pathfinder [9], and the resulting polylines are sampled every 0.15 m to produce dense intermediate camera poses. Across the 30 HM3D scenes, this procedure gives 99% coverage of eligible annotated objects within 2 m of at least one rendered camera pose, where eligible annotated objects exclude uninformative categories such as walls and floors.</p>
+<h3 id="section-v-b"><span class="section-number">V-B</span> Algorithms</h3>
+<p>We compare FARM against map-based, video-only, and keyframe/agent baselines that represent different design choices for relational object retrieval. BBQ evaluates an object-centric scene-graph pipeline with LLM-based relational reasoning. RynnBrain evaluates whether a video VLM can ground the target directly from trajectory frames without an explicit persistent map. DAAAM + RynnBrain tests whether stronger keyframe selection improves the video-only setting. DAAAM GPT-5-mini evaluates an agentic scene-understanding pipeline over a 4D graph; because of API cost and runtime, we evaluate it on FARM-Scenes and on 5-scene subsets of ScanNet and HM3D. The main paper additionally compares KeySG and Embodied-RAG across all three benchmark groups. KeySG supplies hierarchical retrieval. Embodied-RAG builds its semantic forest from FARM-predicted objects reconstructed from the RGB-D stream, so this comparison evaluates retrieval on shared object inputs; its original representation-construction pipeline is outside the evaluated configuration. Their A@1/R@5/R@10/MRR results are reported in main-paper Table II(a); resource measurements for these two methods are unavailable.</p>
+<ul>
+<li><p><strong>FARM and FARM<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mo>∘</mo></msup><annotation encoding="application/x-tex">^{\circ}</annotation></semantics></math></strong>. Our online relational spatial memory (Section III-B of the main paper) is built from streaming posed RGB-D and queried by the structured relational retrieval pipeline in Section III-C of the main paper. Reconstruction uses an open-vocabulary YOLOE detector, an asynchronous Qwen3.5-9B captioner, Qwen3 text embeddings, and SigLIP2/Qwen3-VL image embeddings. We report two variants that share the same memory and candidate retrieval but differ in the final ranking step. FARM<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mo>∘</mo></msup><annotation encoding="application/x-tex">^{\circ}</annotation></semantics></math> parses each utterance with Qwen3.5-9B into typed predicates, retrieves candidates by fusing text, caption, and visual embeddings, and ranks them with our soft predicate evaluator; it does not invoke a VLM at ranking time. FARM adds a projected-view Qwen3.5-9B reranker over the top-5 candidates. Since this reranker only permutes the top-5 candidates, FARM and FARM<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mo>∘</mo></msup><annotation encoding="application/x-tex">^{\circ}</annotation></semantics></math> have identical R@5 and R@10 and differ only in Acc@1 and MRR. The same grounding configuration is used across ScanNet and HM3D.</p></li>
+<li><p><strong>BBQ</strong> . BBQ builds an open-vocabulary object-centric scene graph using MobileSAM masks, DINOv2 cross-view association, and a two-stage LLM grounding procedure for target/anchor selection and relation reasoning. To remove captioner quality as a confound, we replace BBQ’s original captioner with the same Qwen3.5-9B captioner used by FARM; all other components follow the upstream BBQ pipeline.</p></li>
+<li><p><strong>RynnBrain</strong> . RynnBrain-30B is a 30B-A3B MoE video VLM. Following its interleaved-frame protocol, the model ingests sub-sampled trajectory frames and directly emits one 3D AABB per utterance, without constructing a persistent map. To fit within the context length, we downsample trajectories to 2 frames per second. For mask-IoU evaluation, we convert its 2D box output to a segmentation mask using the same SAM2 mask-conversion code used for all methods.</p></li>
+<li><p><strong>DAAAM + RynnBrain</strong> [10]. We use DAAAM as a frame-selection module. For each scene, DAAAM solves its set-cover/view-quality program and selects <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>128</mn></mrow><annotation encoding="application/x-tex">K=128</annotation></semantics></math> keyframes that cover observed fragments. These keyframes are then provided to RynnBrain as an image-based memory.</p></li>
+<li><p><strong>DAAAM GPT-5-mini</strong> [10]. We evaluate DAAAM’s <code>SceneUnderstandingAgent</code>, an OpenAI Responses-API agent over a 4D graph, using <code>gpt-5-mini</code> [11] through OpenRouter with <code>max_iterations</code><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">=5</annotation></semantics></math>.</p></li>
+</ul>
+<p>Methods share the captioner and SAM2 mask conversion where applicable. DAAAM+R uses the same trajectories, query sets, and evaluation denominators as the other methods for every reported overlap criterion on ScanNet–30, HM3D–30, and FARM-Scenes. API cost and runtime limit DAAAM+G evaluation to the 17-scene group: five ScanNet scenes, five HM3D scenes, and all seven FARM-Scenes environments. FARM and DAAAM+G are scored on identical queries in each of these three groups, as in the paired dagger block of main-paper Table II(a). Both methods score all 955 FARM-Scenes queries. Hardware and timing definitions accompany the resource measurements.</p>
+<h3 id="section-v-c"><span class="section-number">V-C</span> DAAAM Reconstruction Configuration</h3>
+<p>DAAAM reconstruction uses dataset-specific depth caps and Hydra/Khronos configurations (Table A5). ScanNet and HM3D use the stock indoor <code>clio_dataset_khronos.yaml</code> configuration. FARM-Scenes uses <code>coda_dataset_khronos_maxrange50.yaml</code>, derived from DAAAM’s stock outdoor <code>coda_dataset_khronos.yaml</code>. Relative to that outdoor default, only the map-window radius and object-detector maximum range are changed, both from 20 to 50 m. The remaining indoor/outdoor differences in the table come from the stock configurations. In particular, the TSDF voxel size changes from 0.1 to 0.2 m, while the object-detector grid size stays at 0.1 m.</p>
+<div class="evidence-table" id="table-a5"><div class="table-caption"><span class="evidence-label">Table A5</span> <p><strong>DAAAM reconstruction settings.</strong> Indoor and outdoor configurations used for ScanNet/HM3D and FARM-Scenes. Depth cap is the reconstruction input limit; detector range and map-window radius are separate settings. Outdoor configuration differences are inherited defaults except for the two range extensions described in the text.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A5 ; scroll horizontally if needed"><table aria-label="Table A5 ">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>ScanNet / HM3D (indoor)</th>
+<th>FARM-Scenes (outdoor, extended range)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input depth cap (m)</td>
+<td>5 / 8</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Map-window maximum radius (m)</td>
+<td>8</td>
+<td>50</td>
+</tr>
+<tr>
+<td>TSDF voxel size (m)</td>
+<td>0.1</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>TSDF truncation distance (m)</td>
+<td>0.3</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Object-detector maximum range (m)</td>
+<td>4</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Object-detector grid size (m)</td>
+<td>0.1</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>Maximum extracted object volume (m<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>3</mn></msup><annotation encoding="application/x-tex">^3</annotation></semantics></math>)</td>
+<td>10</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Traversability minimum place width</td>
+<td>0.1</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>Freespace places (GVD block)</td>
+<td>Present</td>
+<td>Absent</td>
+</tr>
+<tr>
+<td>Backend node merging</td>
+<td>Disabled</td>
+<td>Enabled; NearestNode proposer, embedding merge threshold 0.5</td>
+</tr>
+<tr>
+<td>Backend places functor</td>
+<td><code>UpdatePlacesFunctor</code></td>
+<td>None</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>We use the outdoor configuration for FARM-Scenes to support long-range reconstruction. Its larger map window and detector range accommodate the longer trajectories and greater object distances in these scenes.</p>
+<p>The DAAAM+G evaluation uses a configured input rate of 30 fps on all three dataset groups. Processing latency is measured separately. Shared settings are depth scale 1000, FastSAM-x, re-identification disabled, DAM minimum masks 8, minimum observations per track 3, DAM batch size 128, query interval 1, <code>sentence-t5-large</code>, and the GPT-5-mini agent.</p>
+<h3 id="section-v-d"><span class="section-number">V-D</span> Evaluation Metrics</h3>
+<p><strong>Shared hardware for desktop runtime comparisons.</strong> Every method uses the same hardware allocation: all VLM inference runs on an NVIDIA RTX PRO 6000, and the remaining mapping computation runs on an NVIDIA RTX 5090. This allocation applies to all methods in the desktop runtime comparison. In the real-robot experiments, the entire FARM pipeline—including mapping, captioning, embedding, query parsing, retrieval, and visual verification—runs on NVIDIA Jetson Thor.</p>
+<p>We report four families of metrics, evaluated consistently across methods.</p>
+<ul>
+<li><p><em>Grounding accuracy.</em> For each utterance, a method returns either a ranked list of object candidates or, for RynnBrain-style methods, a single predicted AABB. For ranked methods, we report <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">1</mn></mrow><annotation encoding="application/x-tex">\mathrm{Acc@1}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">5</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@5}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">10</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@10}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><annotation encoding="application/x-tex">\mathrm{MRR}</annotation></semantics></math> over the top-10 candidates. RynnBrain and DAAAM+R return one answer per query, so we compare them only using Acc@1; their ranking metrics are left unreported (dashes). We do not expand their single outputs into ranked candidate lists. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">1</mn></mrow><annotation encoding="application/x-tex">\mathrm{Acc@1}</annotation></semantics></math> measures whether the top-ranked prediction is correct, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mi mathvariant="normal">k</mi></mrow><annotation encoding="application/x-tex">\mathrm{R@k}</annotation></semantics></math> measures whether any of the top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> predictions is correct, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><annotation encoding="application/x-tex">\mathrm{MRR}</annotation></semantics></math> is the mean reciprocal rank of the first correct prediction: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mn>1</mn><msub><mi>r</mi><mi>i</mi></msub></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathrm{MRR}
+    =
+    \frac{1}{N}
+    \sum_{i=1}^{N}
+    \frac{1}{r_i},</annotation></semantics></math> where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mi>i</mi></msub><annotation encoding="application/x-tex">r_i</annotation></semantics></math> is the rank of the first correct candidate for query <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>, and the contribution is zero if no correct candidate appears in the top 10. We evaluate correctness using three overlap criteria: (i) visible-mask IoU, where the ground-truth object is projected into the selected image plane with occlusion handling; (ii) 2D box IoU, included for compatibility with box-prediction baselines such as RynnBrain; and (iii) 3D AABB IoU, included for compatibility with graph baselines such as BBQ. For each criterion, we report thresholds <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0.1</mn><mo>,</mo><mn>0.25</mn><mo>,</mo><mn>0.5</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\tau\in\{0.1,0.25,0.5\}</annotation></semantics></math>.</p></li>
+<li><p><em>Representation size.</em> For graph-based methods, we report the on-disk size of the saved persistent scene-graph artifact in MiB. For RynnBrain, which does not persist an explicit map, we instead report the estimated bf16 visual-token-cache size for the keyframes actually ingested by the grounding model, as a representative memory footprint for a no-explicit-map baseline.</p></li>
+<li><p><em>Mapping latency.</em> For graph-based methods, we report wall-clock time per ingested RGB-D frame, averaged over the full trajectory. For RynnBrain-style methods, we report latency over the frames effectively consumed by the grounding head.</p></li>
+<li><p><em>Query latency.</em> We report wall-clock time per utterance, measured end-to-end from the query string to a ranked candidate list, or to a single AABB for RynnBrain-style methods.</p></li>
+</ul>
+<h3 id="section-v-e"><span class="section-number">V-E</span> Latency and Accuracy vs. Scene Scale</h3>
+<figure class="evidence-figure" id="figure-a2"><img src="assets/figures/mapping-latency.webp" alt="Mapping latency — Figure A2" width="2100" height="772" loading="lazy" decoding="async"><img src="assets/figures/accuracy-by-area.webp" alt="Accuracy by area — Figure A2" width="2100" height="745" loading="lazy" decoding="async"><figcaption><span class="evidence-label">Figure A2</span> <p>Scaling analysis of online memory construction and grounding performance. Top: per-frame mapping latency as a function of frames processed. Bottom: grounding accuracy as scene area increases.</p></figcaption></figure>
+<p>Figure A2 reports memory construction latency and grounding accuracy across scene scales. DAAAM uses the dataset-specific reconstruction configurations in Section V-C; FARM uses a fixed mapping configuration. Mapping latency remains approximately stable across the tested trajectory lengths. Grounding accuracy decreases with scene area, as observation coverage and instance selection become more challenging. Each bin aggregates scenes with different object densities and acquisition conditions.</p>
+
+<h3 id="section-v-f"><span class="section-number">V-F</span> Grounding Accuracy</h3>
+<p>Table A6 reports the main visible-mask IoU evaluation across ScanNet, HM3D, and FARM-Scenes. Bold marks the highest value before rounding within each dataset, threshold, and evaluation block. The FARM and DAAAM+G rows compare identical queries within ScanNet–5, HM3D–5, and FARM-Scenes. On ScanNet 30, FARM reaches Acc@1 of 35.9%, 28.0%, and 13.0% at IoU thresholds 0.1, 0.25, and 0.5, respectively. This consistently improves over BBQ and RynnBrain, and the gap becomes especially large at stricter thresholds: at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\tau=0.5</annotation></semantics></math>, FARM obtains 13.0% Acc@1 compared with 1.4% for RynnBrain and 0.3% for BBQ. The advantage at stricter thresholds demonstrates improved correspondence between the selected objects and the target extent.</p>
+<p>On HM3D–30, FARM achieves the best Acc@1 at all thresholds, with 7.9%, 6.1%, and 2.9% at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.1</mn><mo>,</mo><mn>0.25</mn><mo>,</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\tau=0.1,0.25,0.5</annotation></semantics></math>, respectively. It also substantially improves top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> retrieval: at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">\tau=0.1</annotation></semantics></math>, FARM reaches 26.9% R@10, compared with 12.8% for BBQ. The recall gain shows that FARM makes more target objects accessible to downstream selection in large multi-room environments. Absolute HM3D accuracy remains low. The 997 annotated instances and 1,550 FARM entities per scene in main-paper Table I place these scores in the context of a much larger object pool than ScanNet’s 80 annotations and 287 FARM entities. Observation coverage, memory construction, candidate retrieval, and spatial overlap also contribute to the difficulty.</p>
+<p>On FARM-Scenes, FARM also performs best across all thresholds. At <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">\tau=0.1</annotation></semantics></math>, it achieves 24.2% Acc@1 and 47.3% R@10, outperforming BBQ, RynnBrain, DAAAM + RynnBrain, and DAAAM GPT-5-mini. At <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.25</mn></mrow><annotation encoding="application/x-tex">\tau=0.25</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\tau=0.5</annotation></semantics></math>, FARM remains the strongest method, with 16.4% and 7.5% Acc@1, respectively. These results extend the comparison to the curated relational queries in larger and more heterogeneous environments.</p>
+<h4>Robustness to evaluation protocol</h4>
+<p>Table A7 and Table A8 evaluate whether the same conclusion holds under alternative overlap definitions. Under 2D box IoU, FARM is best on ScanNet at all thresholds and best on HM3D for all top-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> and MRR metrics. DAAAM + RynnBrain leads HM3D Acc@1 at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">\tau=0.1</annotation></semantics></math>, with a slightly higher score (7.7% vs. 7.1%), while FARM leads Acc@1 at stricter thresholds. Rank-based comparisons exclude DAAAM + RynnBrain because it returns a single answer. Under 3D AABB IoU, FARM also outperforms BBQ on both ScanNet and HM3D in mean IoU and in every reported retrieval metric. These results show that the retrieval gains extend across mask, image-box, and 3D-box overlap criteria.</p>
+
+
+
+<div class="evidence-table" id="table-a6"><div class="table-caption"><span class="evidence-label">Table A6</span> <p><strong>Grounding accuracy under visible-mask IoU.</strong> Acc@1, R@5, R@10, and MRR are reported as percentages with one decimal place. We evaluate each method at IoU thresholds <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0.1</mn><mo>,</mo><mn>0.25</mn><mo>,</mo><mn>0.5</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\tau\in\{0.1,0.25,0.5\}</annotation></semantics></math> on ScanNet, HM3D, and FARM-Scenes. ScanNet and HM3D use occlusion-aware visible-mask IoU; FARM-Scenes uses the same 2D mask-IoU protocol on selected evaluation views. DAAAM+R uses the same trajectories, query sets, and evaluation denominators as the other methods. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>G</mi><annotation encoding="application/x-tex">G</annotation></semantics></math> denotes GPT-5-mini. FARM and DAAAM+G use identical queries within each group of the 17-scene paired evaluation (ScanNet–5, HM3D–5, and FARM-Scenes).</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A6 ; scroll horizontally if needed"><table aria-label="Table A6 ">
+<thead>
+<tr>
+<th><strong>Dataset</strong></th>
+<th><strong>Method</strong></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">1</mn></mrow><annotation encoding="application/x-tex">\mathrm{Acc@1}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">5</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@5}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">10</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@10}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><annotation encoding="application/x-tex">\mathrm{MRR}</annotation></semantics></math> (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="12">ScanNet 30</td>
+<td>FARM</td>
+<td>0.1</td>
+<td><strong>35.9</strong></td>
+<td><strong>63.5</strong></td>
+<td><strong>74.6</strong></td>
+<td><strong>47.9</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.1</td>
+<td>28.0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.1</td>
+<td>15.4</td>
+<td>22.8</td>
+<td>23.5</td>
+<td>18.7</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.1</td>
+<td>29.3</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>28.0</strong></td>
+<td><strong>51.4</strong></td>
+<td><strong>61.4</strong></td>
+<td><strong>38.3</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.25</td>
+<td>14.0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.25</td>
+<td>6.1</td>
+<td>9.2</td>
+<td>9.4</td>
+<td>7.5</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.25</td>
+<td>13.2</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td><strong>13.0</strong></td>
+<td><strong>27.9</strong></td>
+<td><strong>34.4</strong></td>
+<td><strong>19.7</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.5</td>
+<td>1.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.5</td>
+<td>0.3</td>
+<td>0.4</td>
+<td>0.4</td>
+<td>0.3</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.5</td>
+<td>1.3</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td rowspan="12">HM3D 30</td>
+<td>FARM</td>
+<td>0.1</td>
+<td><strong>7.9</strong></td>
+<td><strong>18.2</strong></td>
+<td><strong>26.9</strong></td>
+<td><strong>12.5</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.1</td>
+<td>4.6</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.1</td>
+<td>5.3</td>
+<td>10.7</td>
+<td>12.8</td>
+<td>7.6</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.1</td>
+<td>6.1</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>6.1</strong></td>
+<td><strong>14.2</strong></td>
+<td><strong>21.4</strong></td>
+<td><strong>9.8</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.25</td>
+<td>3.3</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.25</td>
+<td>3.7</td>
+<td>7.9</td>
+<td>9.7</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.25</td>
+<td>4.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td><strong>2.9</strong></td>
+<td><strong>7.5</strong></td>
+<td><strong>11.6</strong></td>
+<td><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.5</td>
+<td>1.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.5</td>
+<td>2.0</td>
+<td>4.2</td>
+<td>5.3</td>
+<td>2.9</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.5</td>
+<td>1.9</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td rowspan="15">FARM-Scenes 7</td>
+<td>FARM</td>
+<td>0.1</td>
+<td><strong>24.2</strong></td>
+<td><strong>37.5</strong></td>
+<td><strong>47.3</strong></td>
+<td><strong>30.5</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.1</td>
+<td>2.7</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.1</td>
+<td>7.4</td>
+<td>9.5</td>
+<td>9.6</td>
+<td>8.3</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.1</td>
+<td>15.1</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.1</td>
+<td>5.6</td>
+<td>15.2</td>
+<td>21.2</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>16.4</strong></td>
+<td><strong>26.8</strong></td>
+<td><strong>33.9</strong></td>
+<td><strong>21.1</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.25</td>
+<td>2.1</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.25</td>
+<td>5.1</td>
+<td>6.5</td>
+<td>6.6</td>
+<td>5.7</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.25</td>
+<td>10.1</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.25</td>
+<td>2.9</td>
+<td>8.0</td>
+<td>10.9</td>
+<td>5.6</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td><strong>7.5</strong></td>
+<td><strong>12.5</strong></td>
+<td><strong>16.7</strong></td>
+<td><strong>9.9</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.5</td>
+<td>0.9</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.5</td>
+<td>2.9</td>
+<td>3.6</td>
+<td>3.6</td>
+<td>3.2</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.5</td>
+<td>5.2</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.5</td>
+<td>2.9</td>
+<td>7.5</td>
+<td>10.3</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td rowspan="6">ScanNet 5</td>
+<td>FARM</td>
+<td>0.1</td>
+<td><strong>40.6</strong></td>
+<td><strong>69.7</strong></td>
+<td><strong>76.2</strong></td>
+<td><strong>53.1</strong></td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.1</td>
+<td>26.3</td>
+<td>47.8</td>
+<td>59.0</td>
+<td>37.1</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>31.1</strong></td>
+<td><strong>54.1</strong></td>
+<td><strong>62.1</strong></td>
+<td><strong>41.4</strong></td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.25</td>
+<td>25.6</td>
+<td>46.8</td>
+<td>57.1</td>
+<td>34.7</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td>12.2</td>
+<td>34.2</td>
+<td>36.4</td>
+<td>21.5</td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.5</td>
+<td><strong>20.8</strong></td>
+<td><strong>43.3</strong></td>
+<td><strong>54.2</strong></td>
+<td><strong>30.2</strong></td>
+</tr>
+<tr>
+<td rowspan="6">HM3D 5</td>
+<td>FARM</td>
+<td>0.1</td>
+<td><strong>7.9</strong></td>
+<td><strong>16.1</strong></td>
+<td><strong>24.2</strong></td>
+<td><strong>11.7</strong></td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.1</td>
+<td>4.2</td>
+<td>9.4</td>
+<td>12.4</td>
+<td>6.7</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>5.9</strong></td>
+<td><strong>12.0</strong></td>
+<td><strong>18.8</strong></td>
+<td><strong>8.8</strong></td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.25</td>
+<td>4.0</td>
+<td>8.6</td>
+<td>11.4</td>
+<td>6.2</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td>2.5</td>
+<td>5.9</td>
+<td><strong>9.9</strong></td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>DAAAM + G</td>
+<td>0.5</td>
+<td><strong>3.0</strong></td>
+<td><strong>7.0</strong></td>
+<td>9.0</td>
+<td><strong>4.8</strong></td>
+</tr>
+</tbody>
+</table></div></div>
+<div class="evidence-table" id="table-a7"><div class="table-caption"><span class="evidence-label">Table A7</span> <p><strong>Grounding accuracy under 2D box IoU.</strong> Acc@1, R@5, R@10, and MRR are reported as percentages with one decimal place. We evaluate predictions using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">I</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">U</mi></mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">_</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">x</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">G</mi><mi mathvariant="normal">T</mi><mi mathvariant="normal">_</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">x</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><mi>τ</mi></mrow><annotation encoding="application/x-tex">\mathrm{IoU}(\mathrm{pred\_bbox}, \mathrm{GT\_bbox}) \ge \tau</annotation></semantics></math> at thresholds <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0.1</mn><mo>,</mo><mn>0.25</mn><mo>,</mo><mn>0.5</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\tau\in\{0.1,0.25,0.5\}</annotation></semantics></math>. This protocol provides a box-based comparison with methods that directly output bounding boxes. Results are reported on ScanNet 30 and HM3D 30. DAAAM + RynnBrain uses the same trajectories, query sets, and evaluation denominators as the other methods under this 2D box-IoU protocol.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A7 ; scroll horizontally if needed"><table aria-label="Table A7 ">
+<thead>
+<tr>
+<th><strong>Dataset</strong></th>
+<th><strong>Method</strong></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">1</mn></mrow><annotation encoding="application/x-tex">\mathrm{Acc@1}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">5</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@5}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">10</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@10}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><annotation encoding="application/x-tex">\mathrm{MRR}</annotation></semantics></math> (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="12">ScanNet 30</td>
+<td>FARM</td>
+<td>0.1</td>
+<td><strong>33.8</strong></td>
+<td><strong>65.3</strong></td>
+<td><strong>76.3</strong></td>
+<td><strong>47.1</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.1</td>
+<td>22.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.1</td>
+<td>15.6</td>
+<td>22.5</td>
+<td>22.7</td>
+<td>18.5</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.1</td>
+<td>23.5</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>23.7</strong></td>
+<td><strong>46.4</strong></td>
+<td><strong>55.9</strong></td>
+<td><strong>33.4</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.25</td>
+<td>3.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.25</td>
+<td>4.2</td>
+<td>6.0</td>
+<td>6.2</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.25</td>
+<td>3.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td><strong>7.7</strong></td>
+<td><strong>19.8</strong></td>
+<td><strong>24.0</strong></td>
+<td><strong>12.6</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.5</td>
+<td>0.2</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.5</td>
+<td>0.2</td>
+<td>0.4</td>
+<td>0.4</td>
+<td>0.3</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.5</td>
+<td>0.2</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td rowspan="12">HM3D 30</td>
+<td>FARM</td>
+<td>0.1</td>
+<td>7.1</td>
+<td><strong>19.0</strong></td>
+<td><strong>28.2</strong></td>
+<td><strong>12.4</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.1</td>
+<td>5.6</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.1</td>
+<td>6.2</td>
+<td>12.0</td>
+<td>14.1</td>
+<td>8.6</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.1</td>
+<td><strong>7.7</strong></td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.25</td>
+<td><strong>5.5</strong></td>
+<td><strong>15.4</strong></td>
+<td><strong>22.9</strong></td>
+<td><strong>9.9</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.25</td>
+<td>4.2</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.25</td>
+<td>4.4</td>
+<td>8.9</td>
+<td>10.7</td>
+<td>6.3</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.25</td>
+<td>5.4</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>0.5</td>
+<td><strong>2.7</strong></td>
+<td><strong>8.8</strong></td>
+<td><strong>13.8</strong></td>
+<td><strong>5.5</strong></td>
+</tr>
+<tr>
+<td>RynnBrain-30B</td>
+<td>0.5</td>
+<td>1.6</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>0.5</td>
+<td>2.4</td>
+<td>5.1</td>
+<td>6.5</td>
+<td>3.6</td>
+</tr>
+<tr>
+<td>DAAAM + RynnBrain</td>
+<td>0.5</td>
+<td>2.1</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div></div>
+<div class="evidence-table" id="table-a8"><div class="table-caption"><span class="evidence-label">Table A8</span> <p><strong>Grounding accuracy under 3D AABB IoU.</strong> Mean IoU, Acc@1, R@5, R@10, and MRR are reported as percentages with one decimal place. We compare graph-based methods using 3D axis-aligned bounding-box overlap at thresholds <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0.1</mn><mo>,</mo><mn>0.25</mn><mo>,</mo><mn>0.5</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\tau\in\{0.1,0.25,0.5\}</annotation></semantics></math>. Mean IoU is computed over top-1 predictions. Results are reported on ScanNet–30 and HM3D–30.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A8 ; scroll horizontally if needed"><table aria-label="Table A8 ">
+<thead>
+<tr>
+<th><strong>Dataset</strong></th>
+<th><strong>Method</strong></th>
+<th><strong>Mean IoU</strong> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">1</mn></mrow><annotation encoding="application/x-tex">\mathrm{Acc@1}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">5</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@5}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">@</mi><mn mathvariant="normal">10</mn></mrow><annotation encoding="application/x-tex">\mathrm{R@10}</annotation></semantics></math> (%)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><annotation encoding="application/x-tex">\mathrm{MRR}</annotation></semantics></math> (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="6">ScanNet 30</td>
+<td>FARM</td>
+<td><strong>11.3</strong></td>
+<td>0.1</td>
+<td><strong>29.4</strong></td>
+<td><strong>60.0</strong></td>
+<td><strong>70.6</strong></td>
+<td><strong>42.8</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>9.7</td>
+<td>0.1</td>
+<td>22.7</td>
+<td>35.4</td>
+<td>35.9</td>
+<td>28.1</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td><strong>11.3</strong></td>
+<td>0.25</td>
+<td><strong>20.1</strong></td>
+<td><strong>46.9</strong></td>
+<td><strong>57.4</strong></td>
+<td><strong>32.2</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>9.7</td>
+<td>0.25</td>
+<td>15.8</td>
+<td>25.0</td>
+<td>25.9</td>
+<td>19.8</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td><strong>11.3</strong></td>
+<td>0.5</td>
+<td><strong>7.8</strong></td>
+<td><strong>21.1</strong></td>
+<td><strong>26.7</strong></td>
+<td><strong>13.6</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>9.7</td>
+<td>0.5</td>
+<td>7.7</td>
+<td>13.1</td>
+<td>13.7</td>
+<td>10.1</td>
+</tr>
+<tr>
+<td rowspan="6">HM3D 30</td>
+<td>FARM</td>
+<td><strong>1.5</strong></td>
+<td>0.1</td>
+<td><strong>4.0</strong></td>
+<td><strong>11.8</strong></td>
+<td><strong>17.9</strong></td>
+<td><strong>8.5</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>1.3</td>
+<td>0.1</td>
+<td>3.1</td>
+<td>6.5</td>
+<td>7.9</td>
+<td>4.6</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td><strong>1.5</strong></td>
+<td>0.25</td>
+<td><strong>2.3</strong></td>
+<td><strong>7.3</strong></td>
+<td><strong>11.4</strong></td>
+<td><strong>5.3</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>1.3</td>
+<td>0.25</td>
+<td>1.9</td>
+<td>4.1</td>
+<td>5.2</td>
+<td>2.9</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td><strong>1.5</strong></td>
+<td>0.5</td>
+<td><strong>0.9</strong></td>
+<td><strong>3.0</strong></td>
+<td><strong>4.5</strong></td>
+<td><strong>2.2</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>1.3</td>
+<td>0.5</td>
+<td>0.9</td>
+<td>2.1</td>
+<td>2.8</td>
+<td>1.4</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<h3 id="section-v-g"><span class="section-number">V-G</span> Component Comparisons</h3>
+<div class="evidence-table" id="table-a10"><div class="table-caption"><span class="evidence-label">Table A9</span><p>Panel (a) evaluates retrieval stages on fixed FARM memory using visible-mask IoU <span class="math">≥0.1</span>. Panel (b) compares memory backends, retrieval embeddings, and association features. Panel (c) compares retrieval mechanisms and rerankers with FARM memory fixed. Values report A@1 / R@10 (%) with one decimal place for ScanNet–5, HM3D–5, and FARM-Scenes; — indicates no reported result. Methods and components: BBQ [12], DAAAM [10]; association backends DINO [3], Hydra+DAM [13, 14], YOLOE [2]; retrieval embeddings Qwen3-T [15], SigLIP2 [16], Qwen3-VL [17], T5 [18].</p></div><h4>(a) Retrieval stages on fixed FARM memory</h4><div class="table-scroll" tabindex="0" role="region" aria-label="(a) Retrieval stages on fixed FARM memory; scroll horizontally if needed"><table aria-label="Table A9 (a) Retrieval stages"><thead><tr><th>Component/configuration</th><th>ScanNet–5</th><th>HM3D–5</th><th>FARM-Scenes</th></tr></thead><tbody><tr><td>Whole-utterance embedding</td><td>28.2 / 67.4</td><td>2.2 / 8.8</td><td>9.3 / 33.6</td></tr><tr><td>Target-object embedding</td><td>38.7 / 73.6</td><td>5.9 / 22.1</td><td>15.9 / 45.7</td></tr><tr><td>+ geometric predicates</td><td><strong>41.6 / 76.2</strong></td><td>6.7 / <strong>24.2</strong></td><td>16.3 / <strong>47.3</strong></td></tr><tr><td>+ VLM reranking</td><td>40.6 / <strong>76.2</strong></td><td><strong>7.9 / 24.2</strong></td><td><strong>24.2 / 47.3</strong></td></tr></tbody></table></div><h4>(b) Scene representation</h4><div class="table-scroll" tabindex="0" role="region" aria-label="(b) Scene representation; scroll horizontally if needed"><table aria-label="Table A9 (b) Scene representation">
+<tbody>
+<tr>
+<td rowspan="2"><strong>Method</strong></td>
+<td rowspan="2"><strong>Merge</strong></td>
+<td rowspan="2"><strong>Retr. emb.</strong></td>
+<td colspan="3"><strong>A@1 / R@10 (%)</strong></td>
+</tr>
+<tr>
+<td><strong>ScanNet–5</strong></td>
+<td><strong>HM3D–5</strong></td>
+<td><strong>FARM-Scenes</strong></td>
+</tr>
+<tr>
+<td>BBQ</td>
+<td>DINO</td>
+<td>Qwen3-T</td>
+<td>5.4 / 17.2</td>
+<td>2.3 / 10.3</td>
+<td>5.9 / 15.3</td>
+</tr>
+<tr>
+<td>DAAAM</td>
+<td>Hydra+DAM</td>
+<td>Qwen3-T</td>
+<td>18.6 / 51.0</td>
+<td>2.6 / 12.2</td>
+<td>5.0 / 17.4</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>Qwen3-T</td>
+<td><strong>23.0</strong> / <strong>58.8</strong></td>
+<td><strong>3.6</strong> / <strong>16.0</strong></td>
+<td><strong>9.8</strong> / <strong>28.8</strong></td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>SigLIP2</td>
+<td>7.4 / 30.9</td>
+<td>0.3 / 1.7</td>
+<td>0.9 / 3.5</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>Qwen3-VL</td>
+<td>14.7 / 41.2</td>
+<td>1.7 / 12.4</td>
+<td>2.7 / 12.2</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>T5</td>
+<td>22.1 / <strong>59.8</strong></td>
+<td>3.3 / 15.6</td>
+<td><strong>10.6</strong> / 28.6</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>Qwen3-T</td>
+<td>23.0 / 58.8</td>
+<td>3.6 / <strong>16.0</strong></td>
+<td>9.8 / <strong>28.8</strong></td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>multi</td>
+<td><strong>23.5</strong> / 55.4</td>
+<td><strong>4.1</strong> / 14.8</td>
+<td>8.7 / 27.4</td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>YOLOE</td>
+<td>multi</td>
+<td>17.6 / 54.4</td>
+<td><strong>4.1</strong> / <strong>16.1</strong></td>
+<td><strong>9.0</strong> / <strong>29.0</strong></td>
+</tr>
+<tr>
+<td>FARM</td>
+<td>DINO</td>
+<td>multi</td>
+<td><strong>23.5</strong> / 55.4</td>
+<td><strong>4.1</strong> / 14.8</td>
+<td>8.7 / 27.4</td>
+</tr>
+</tbody>
+</table></div><h4>(c) Retrieval and reranking</h4><div class="table-scroll" tabindex="0" role="region" aria-label="(c) Retrieval and reranking; scroll horizontally if needed"><table aria-label="Table A9 (c) Retrieval and reranking">
+<tbody>
+<tr><td rowspan="2"><strong>Retrieval</strong></td><td rowspan="2"><strong>Rerank</strong></td><td colspan="3"><strong>A@1 / R@10 (%)</strong></td></tr>
+<tr><td><strong>ScanNet–5</strong></td><td><strong>HM3D–5</strong></td><td><strong>FARM-Scenes</strong></td></tr>
+<tr><td colspan="5"><em>Retrieval mechanism ablation without reranking.</em></td></tr>
+<tr><td>Target embedding</td><td>None</td><td>38.7 / 73.6</td><td>5.9 / 22.1</td><td>15.9 / 45.7</td></tr>
+<tr><td>BBQ-style</td><td>None</td><td>14.5 / 58.9</td><td>5.3 / 22.5</td><td>—</td></tr>
+<tr><td>BBQ-style + multi</td><td>None</td><td>31.5 / 71.7</td><td>5.8 / 22.4</td><td>—</td></tr>
+<tr><td>FARM</td><td>None</td><td><strong>41.6</strong> / <strong>76.2</strong></td><td><strong>6.7</strong> / <strong>24.2</strong></td><td><strong>16.3 / 47.3</strong></td></tr>
+<tr><td colspan="5"><em>Reranking ablation with fixed FARM retrieval.</em></td></tr>
+<tr><td>FARM</td><td>None</td><td><strong>41.6</strong> / <strong>76.2</strong></td><td>6.7 / <strong>24.2</strong></td><td>16.3 / <strong>47.3</strong></td></tr>
+<tr><td>FARM</td><td>Qwen@5</td><td>40.6 / <strong>76.2</strong></td><td>7.9 / <strong>24.2</strong></td><td><strong>24.2 / 47.3</strong></td></tr>
+<tr><td>FARM</td><td>RynnBrain@10</td><td>31.6 / <strong>76.2</strong></td><td><strong>8.4</strong> / <strong>24.2</strong></td><td>—</td></tr>
+</tbody>
+</table></div></div><p>Panel (a) reports the effect of target extraction, geometric predicates, and Qwen3.5-9B reranking. Panel (b) fixes Qwen3-text retrieval for the memory comparison, then varies embedding channels and association features within FARM. Panel (c) compares target embedding, BBQ-style retrieval, and FARM structured retrieval without reranking, followed by Qwen3.5-9B and RynnBrain reranking of fixed FARM candidates. The comparison separates the contributions of retrieval and final visual selection.</p>
+<h3 id="section-v-h"><span class="section-number">V-H</span> Association Features</h3>
+<p>With the same multi-embedding retriever, DINO association features yield 23.5% A@1 and 55.4% R@10 on ScanNet–5, compared with 17.6% and 54.4% for YOLOE features (Table A9). On HM3D–5, both yield 4.1% A@1, while YOLOE yields higher R@10 (16.1% versus 14.8%). On FARM-Scenes, YOLOE yields 9.0% A@1 and 29.0% R@10, compared with 8.7% and 27.4% for DINO. Both feature choices support the same association framework, with their relative accuracy varying across datasets.</p>
+<h3 id="section-v-i"><span class="section-number">V-I</span> Retrieval-Stage Analysis</h3>
+<div class="evidence-table" id="table-a11"><div class="table-caption"><span class="evidence-label">Table A10</span> <p><strong>Retrieval-stage coverage.</strong> Targets are tracked through the top-100 diagnostic candidate set, spatial top ten, and final answer under visible-mask IoU ≥0.1. The first three rows use all queries; conditional rates divide successive aggregate stage rates.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A10 ; scroll horizontally if needed"><table aria-label="Table A10 ">
+<thead>
+<tr>
+<th>Stage/rate (%)</th>
+<th>ScanNet–30</th>
+<th>HM3D–30</th>
+<th>FARM-Scenes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target in diagnostic candidate set</td>
+<td>82.0</td>
+<td>45.3</td>
+<td>53.6</td>
+</tr>
+<tr>
+<td>Target in spatial top ten</td>
+<td>74.6</td>
+<td>26.9</td>
+<td>47.3</td>
+</tr>
+<tr>
+<td>Final top-1 correct</td>
+<td>35.9</td>
+<td>7.9</td>
+<td>24.2</td>
+</tr>
+<tr>
+<td>Top-ten retention given candidate inclusion</td>
+<td>91.0</td>
+<td>59.4</td>
+<td>88.2</td>
+</tr>
+<tr>
+<td>Top-1 correct given top-ten inclusion</td>
+<td>48.1</td>
+<td>29.4</td>
+<td>51.2</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>Table A10 traces targets through the diagnostic candidate set, spatial top ten, and final selection. On ScanNet, candidate recall is 82.0%, and the spatial top ten retains 91.0% of these targets. Final A@1 is 35.9%, leaving a 38.7-point gap between top-ten recall and top-one accuracy. This identifies candidate-specific verification as a clear opportunity for further gains.</p>
+<p>On HM3D, candidate recall is 45.3%, placing 54.7% of queries outside the reach of subsequent spatial scoring. Candidate inclusion depends jointly on observation coverage, memory construction, semantic descriptions, and coarse retrieval. Improving these stages complements more accurate relational selection.</p>
+<p>On FARM-Scenes, candidate recall is 53.6%, and the spatial top ten retains 88.2% of these targets, yielding 47.3% R@10. Final A@1 reaches 24.2%. These results support the complementary roles of memory coverage, spatial scoring, and visual verification in heterogeneous environments.</p>
+<h3 id="section-v-j"><span class="section-number">V-J</span> Additional Relational Retrieval Examples</h3>
+<figure class="evidence-figure" id="figure-a4"><img src="assets/figures/relational-examples.webp" alt="Relational examples — Figure A3" width="2100" height="982" loading="lazy" decoding="async"><figcaption><span class="evidence-label">Figure A3</span> <p>Relational target and anchor examples from indoor and warehouse scenes. The queries use spatial relations and anchor attributes to distinguish similar target instances.</p></figcaption></figure>
+<h3 id="section-v-k"><span class="section-number">V-K</span> Spot Demonstration: Acquisition, Replay, and Navigation</h3>
+<p>We demonstrate onboard object retrieval and navigation with a Boston Dynamics Spot quadruped. A teleoperated sensor recording is replayed through FARM&#x27;s streaming mapping node on Jetson Thor to construct memory. After mapping, Spot grounds relational language queries in that memory and navigates to the retrieved objects&#x27; stored viewpoints.</p>
+<figure class="evidence-figure" id="figure-a5"><img src="assets/figures/robot-platform.webp" alt="Robot platform — Figure A4" width="2100" height="1515" loading="lazy" decoding="async"><figcaption><span class="evidence-label">Figure A4</span> <p><strong>Real-robot platform.</strong> Boston Dynamics Spot with a Manifold Tech Odin 1 perception unit (RGB-D and LiDAR visual-inertial odometry) and an onboard NVIDIA Jetson Thor running FARM.</p></figcaption></figure>
+<h4>Robot platform and sensing</h4>
+<p>We use a Boston Dynamics Spot quadruped, equipped with a Manifold Tech Odin 1 perception unit and an NVIDIA Jetson Thor onboard computer (Figure A4). The Odin 1 is a self-contained sensor that provides RGB, metric depth, and a built-in LiDAR visual-inertial odometry pose stream, removing the need for an external SLAM stack at mapping time. An adapter node converts the raw topics into posed RGB-D frames for FARM to ingest into the online memory-construction node.</p>
+<h4>Onboard compute and deployment</h4>
+<p>The complete FARM pipeline, including perception, memory construction, captioning, embedding, query parsing, retrieval, and visual verification, runs on the Jetson Thor, an aarch64 platform with a Blackwell-class GPU and 128 GB of unified CPU–GPU memory: the segmentation and embedding models run in-process, and Qwen3.5-9B for captioning, query parsing, and visual verification and the Qwen3 embedding model are served by a local vLLM server on the same device [19, 17, 15, 20]. We build on an existing ROS 2 base stack that provides the Spot driver and the Odin 1 sensor driver; FARM runs as a separate process alongside it on a shared DDS domain, communicating through ROS 2 topics. Memory construction runs at approximately 5–10 Hz on Jetson Thor. The mapping node always processes the newest available frame and drops any stale frames that arrive while it is busy, enabling it to keep up with real-time operation.</p>
+<figure class="evidence-figure" id="figure-a6"><img src="assets/figures/robot-memory.webp" alt="Robot memory — Figure A5" width="2100" height="1183" loading="lazy" decoding="async"><figcaption><span class="evidence-label">Figure A5</span> <p><strong>Onboard scene-graph construction.</strong> A snapshot of FARM building its object-level memory on the robot from the Stage-1 log. <em>Left</em>: an RGB frame with open-vocabulary detections and its aligned metric depth. <em>Middle</em>: the mapped environment and the accumulated 3D point clouds with per-object bounding boxes. <em>Right</em>: example object-memory entries, each with a category, a crop, and the VLM caption used for retrieval.</p></figcaption></figure>
+<h4>Stage 1: memory construction from a teleoperation log</h4>
+<p>In the first stage, an operator manually teleoperates Spot and the onboard Odin 1 unit through the environment, recording the raw sensor streams to a rosbag. The bag is later replayed on the Jetson Thor through the same online mapping node used for live operation, which incrementally constructs the object-level memory of Section III-A and persists it as a scene state. The saved scene state also records the mapping-time camera poses, which Stage 2 reuses to construct a navigation graph.</p>
+<h4>Stage 2: language-conditioned object-goal navigation</h4>
+<p>In the second stage the robot operates autonomously over the constructed scene memory, given spatial-relational object-query strings. Each query is grounded against the onboard memory by the retrieval pipeline of Section III-B, returning the top-ranked object and a saved viewpoint from which it was observed during mapping. Everything runs on the robot’s Jetson Thor, including the onboard vLLM server that hosts the models used for parsing, embedding, and visual verification.</p>
+<p>Navigation uses the recorded Stage-1 waypoints as a graph. The retrieved object&#x27;s saved viewpoint defines the goal; Dijkstra&#x27;s algorithm finds a shortest path through the graph, and Spot&#x27;s trajectory controller executes the resulting waypoints.</p>
+<h4>Qualitative demonstration</h4>
+<p>Table A11 lists the eight queries in the qualitative demonstration. Several share the target category “cardboard package” and use different anchors to distinguish instances. Two queries fail; subsequent queries add attributes to the target or anchor description and succeed. The supplementary video shows the retrieval and navigation sequence.</p>
+<div class="evidence-table" id="table-a12"><div class="table-caption"><span class="evidence-label">Table A11</span> <p><strong>Real-robot demonstration queries.</strong> Queries and observed outcomes in the onboard retrieval-and-navigation demonstration. Repeated target categories require relational or attribute-based disambiguation. Follow-up queries refine target or anchor descriptions.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Table A11 ; scroll horizontally if needed"><table aria-label="Table A11 ">
+<thead>
+<tr>
+<th><strong>Query</strong></th>
+<th><strong>Relation</strong></th>
+<th><strong>Outcome</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“door to the right of the sofa”</td>
+<td><span class="sans-serif">RightOf</span></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>“cardboard package in front of the trash can”</td>
+<td><span class="sans-serif">InFrontOf</span></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>“cardboard package under a table”</td>
+<td><span class="sans-serif">Below</span></td>
+<td>✗</td>
+</tr>
+<tr>
+<td>“cardboard package under a white table”</td>
+<td><span class="sans-serif">Below</span></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>“cardboard package next to a humanoid robot”</td>
+<td><span class="sans-serif">NextTo</span></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>“chair between a white table and a robot”</td>
+<td><span class="sans-serif">Between</span></td>
+<td>✗</td>
+</tr>
+<tr>
+<td>“gray fabric chair between a white table and a robot”</td>
+<td><span class="sans-serif">Between</span></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>“purple office chair closest to a package”</td>
+<td><span class="sans-serif">Closest</span></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table></div></div>
+<h3 id="section-v-l"><span class="section-number">V-L</span> Robustness to Acquisition Conditions on Unitree A2</h3>
+<figure class="evidence-figure a2-setup" id="unitree-a2-setup" aria-labelledby="a2-setup-caption">
+<div class="a2-setup-grid">
+<div class="a2-frame"><img src="assets/figures/a2-platform.jpg" alt="Unitree A2 quadruped carrying a laptop and a sensor mounted above its body" width="1024" height="576" loading="lazy" decoding="async"><p>Robot platform</p></div>
+<div class="a2-frame"><img src="assets/figures/a2-onboard-equipment.jpg" alt="Closer view of the laptop and sensor mounted on the Unitree A2" width="1024" height="576" loading="lazy" decoding="async"><p>Mounted equipment</p></div>
+<div class="a2-frame"><img src="assets/figures/a2-indoor-acquisition.jpg" alt="Unitree A2 moving through an indoor corridor with its mounted equipment" width="1024" height="576" loading="lazy" decoding="async"><p>Indoor acquisition</p></div>
+</div><figcaption id="a2-setup-caption"><span class="evidence-label">Unitree A2 · Real robot setup</span>Frames from the acquisition video show the quadruped platform, mounted laptop and sensor, and operation in an indoor corridor.</figcaption></figure>
+
+<p>The Unitree A2 study evaluates retrieval robustness as acquisition conditions change. All FARM processing for this real-robot study, including mapping and VLM inference, runs on NVIDIA Jetson Thor. We deliberately keep the target objects and 22 queries fixed across five acquisitions of the same approximately 770 m<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>2</mn></msup><annotation encoding="application/x-tex">^2</annotation></semantics></math> floor while varying sensor height, route, and speed. Acquisition and query authoring are performed independently. Camera height ranges from 0.5 to 0.7 m, route length from 150 to 192 m, and 95th-percentile speed from 0.8 to 2.4 m/s. SLAM-estimated return-to-start displacement ranges from 7.0 to 25.3 cm. A@1 is <span class="math">55.5±7.4</span>% and R@10 is <span class="math">84.6±5.2</span>%, reported as mean <span class="math">±</span> standard deviation of the five run-level accuracies.</p>
+<p>Variation across runs summarizes the joint effect of camera height, route, and speed.</p>
+<p>During Spot-log replay on Jetson Thor, captioning runs at 2 Hz with five objects per batch (10 objects/s), and newly observed objects are typically queryable within 5 s. This semantic-availability interval includes asynchronous captioning and embedding, while mapping throughput measures the synchronous update loop.</p>
+</section><section class="appendix-chapter"><h2 id="references">References</h2>
+<ol>
+<li><p>K. Kask, R. Dechter, J. Larrosa, and A. Dechter, “Unifying tree decompositions for reasoning in graphical models,” <em>Artificial Intelligence</em>, vol. 166, no. 1, pp. 165–193, 2005.</p></li>
+<li><p>A. Wang, L. Liu, H. Chen, Z. Lin, J. Han, and G. Ding, “Yoloe: Real-time seeing anything,” in <em>Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</em>, October 2025, pp. 24 591–24 602.</p></li>
+<li><p>O. Sim<span>é</span>oni, H. V. Vo, M. Seitzer, F. Baldassarre, M. Oquab, C. Jose, V. Khalidov, M. Szafraniec, S. Yi, M. Ramamonjisoa, F. Massa, D. Haziza, L. Wehrstedt, J. Wang, T. Darcet, T. Moutakanni, L. Sentana, C. Roberts, A. Vedaldi, J. Tolan, J. Brandt, C. Couprie, J. Mairal, H. J<span>é</span>gou, P. Labatut, and P. Bojanowski, “<span>DINOv3</span>,” 2025.</p></li>
+<li><p>H.-Y. Hou, C.-Y. Lee, M. Sonogashira, and Y. Kawanishi, “<span>FROSS</span>: <span>F</span>aster-than-<span>R</span>eal-<span>T</span>ime <span>O</span>nline 3<span>D</span> <span>S</span>emantic <span>S</span>cene <span>G</span>raph <span>G</span>eneration from <span>RGB-D</span> <span>I</span>mages,” in <em>Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</em>, October 2025, pp. 28 818–28 827.</p></li>
+<li><p>T. Tuna, J. Frey, F. Fu, K. Patterson, T. Xu, M. Fallon, C. Cadena, and M. Hutter, “GrandTour: A legged robotics dataset in the wild for multi-modal perception and state estimation,” 2026.</p></li>
+<li><p>B. Yi, C. M. Kim, J. Kerr, G. Wu, R. Feng, A. Zhang, J. Kulhanek, H. Choi, Y. Ma, M. Tancik, and A. Kanazawa, “Viser: Imperative, web-based 3d visualization in python,” <em>arXiv preprint arXiv:2507.22885</em>, 2025.</p></li>
+<li><p>N. Ravi, V. Gabeur, Y.-T. Hu, R. Hu, C. Ryali, T. Ma, H. Khedr, R. R<span>ä</span>dle, C. Rolland, L. Gustafson, E. Mintun, J. Pan, K. V. Alwala, N. Carion, C.-Y. Wu, R. Girshick, P. Doll<span>á</span>r, and C. Feichtenhofer, “SAM 2: Segment anything in images and videos,” 2024.</p></li>
+<li><p>G. Team, P. Georgiev, V. I. Lei, R. Burnell, L. Bai, A. Gulati, G. Tanzer, D. Vincent, Z. Pan, S. Wang, <em>et al.</em>, “Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context,” <em>arXiv preprint arXiv:2403.05530</em>, 2024.</p></li>
+<li><p>X. Puig, E. Undersander, A. Szot, M. D. Cote, R. Partsey, J. Yang, R. Desai, A. W. Clegg, M. Hlavac, T. Min, T. Gervet, V. Vondru<span>š</span>, V.-P. Berges, J. Turner, O. Maksymets, Z. Kira, M. Kalakrishnan, J. Malik, D. S. Chaplot, U. Jain, D. Batra, A. Rai, and R. Mottaghi, “Habitat 3.0: A co-habitat for humans, avatars and robots,” 2023.</p></li>
+<li><p>N. Gorlo, L. Schmid, and L. Carlone, “Describe anything anywhere at any moment,” 2025.</p></li>
+<li><p>A. Singh <em>et al.</em>, “OpenAI GPT-5 system card,” 2026.</p></li>
+<li><p>S. Linok, T. Zemskova, S. Ladanova, R. Titkov, D. Yudin, M. Monastyrny, and A. Valenkov, “Beyond bare queries: Open-vocabulary object grounding with 3d scene graph,” in <em>2025 IEEE International Conference on Robotics and Automation (ICRA)</em>, 2025, pp. 13 582–13 589.</p></li>
+<li><p>N. Hughes, Y. Chang, and L. Carlone, “Hydra: A real-time spatial perception system for <span>3D</span> scene graph construction and optimization,” 2022.</p></li>
+<li><p>L. Lian, Y. Ding, Y. Ge, S. Liu, H. Mao, B. Li, M. Pavone, M.-Y. Liu, T. Darrell, A. Yala, and Y. Cui, “Describe anything: Detailed localized image and video captioning,” <em>arXiv preprint arXiv:2504.16072</em>, 2025.</p></li>
+<li><p>Y. Zhang, M. Li, D. Long, X. Zhang, H. Lin, B. Yang, P. Xie, A. Yang, D. Liu, J. Lin, F. Huang, and J. Zhou, “Qwen3 Embedding: Advancing text embedding and reranking through foundation models,” 2025.</p></li>
+<li><p>M. Tschannen, A. Gritsenko, X. Wang, M. F. Naeem, I. Alabdulmohsin, N. Parthasarathy, T. Evans, L. Beyer, Y. Xia, B. Mustafa, O. Hénaff, J. Harmsen, A. Steiner, and X. Zhai, “SigLIP 2: Multilingual vision-language encoders with improved semantic understanding, localization, and dense features,” <em>arXiv preprint arXiv:2502.14786</em>, 2025.</p></li>
+<li><p>M. Li, Y. Zhang, D. Long, K. Chen, S. Song, S. Bai, Z. Yang, P. Xie, A. Yang, D. Liu, J. Zhou, and J. Lin, “Qwen3-VL-Embedding and Qwen3-VL-Reranker: A unified framework for state-of-the-art multimodal retrieval and ranking,” <em>arXiv</em>, 2026.</p></li>
+<li><p>C. Raffel, N. Shazeer, A. Roberts, K. Lee, S. Narang, M. Matena, Y. Zhou, W. Li, and P. J. Liu, “Exploring the limits of transfer learning with a unified text-to-text transformer,” <em>Journal of Machine Learning Research</em>, vol. 21, no. 140, pp. 1–67, 2020.</p></li>
+<li><p>Qwen Team, “Qwen3.5: Accelerating productivity with native multimodal agents,” February 2026.</p></li>
+<li><p>W. Kwon, Z. Li, S. Zhuang, Y. Sheng, L. Zheng, C. H. Yu, J. E. Gonzalez, H. Zhang, and I. Stoica, “Efficient memory management for large language model serving with pagedattention,” in <em>Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles</em>, 2023.</p></li>
+</ol></section></div></div></section></main><footer><span>FARM · Supplementary material</span><span>Anonymous review</span></footer><noscript><p class="no-script">The entire appendix is readable without JavaScript. Enable JavaScript to use section shortcuts and switch videos.</p></noscript></body></html>
